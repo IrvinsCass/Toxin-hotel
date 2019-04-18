@@ -1,0 +1,30 @@
+{
+  "name": "CV-parcel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.pug",
+    "build": "parcel build index.pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrvinsCass/CV-parcel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IrvinsCass/CV-parcel/issues"
+  },
+  "homepage": "https://github.com/IrvinsCass/CV-parcel#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "cssnano": "^4.1.10",
+    "material-design-icons": "^3.0.1",
+    "postcss-modules": "^1.4.1",
+    "pug": "^2.0.3",
+    "sass": "^1.18.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,47 @@
+header {
+  width: 100%;
+  padding: 15px 9.7%;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__logo {
+    width: 106px;
+    height: 40px;
+    margin-right: 24.5%;
+  }
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    min-width: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: normal;
+    color: $dark50;
+    margin-right: 20px;
+  }
+
+  &__login-button {
+    width: 87px;
+    height: 34px;
+  }
+
+  &__register-button {
+    width: 196px;
+    height: 34px;
+  }
+}

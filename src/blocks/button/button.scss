@@ -1,0 +1,15 @@
+@import './button_filled/button_filled.scss';
+
+.button {
+  border-radius: 22px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: normal;
+  text-transform: uppercase;
+}

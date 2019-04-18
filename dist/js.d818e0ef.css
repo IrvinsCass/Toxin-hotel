@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), local("Montserrat"), url("/Montserrat-Regular.d2116ab1.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: local("Quicksand"), local("Quicksand-Regular"), url("/quicksand.ef10583c.woff") format("woff"), url("/quicksand.bce6cbaf.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+header {
+  width: 100%;
+  padding: 15px 9.7%;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header-nav__logo {
+  width: 106px;
+  height: 40px;
+  margin-right: 24.5%;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+.navbar__item {
+  min-width: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: normal;
+  color: rgba(31, 32, 65, 0.5);
+  margin-right: 20px;
+}
+.navbar__login-button {
+  width: 87px;
+  height: 34px;
+}
+.navbar__register-button {
+  width: 196px;
+  height: 34px;
+}
+
+.button_filled {
+  color: white;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.button_filled:hover {
+  opacity: 0.5;
+}
+
+.button {
+  border-radius: 22px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+}
+
+/*# sourceMappingURL=/js.d818e0ef.css.map */
