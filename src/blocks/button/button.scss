@@ -1,9 +1,9 @@
 @import './button_filled/button_filled.scss';
+@import './button_transparent/button_transparent.scss';
 
 .button {
   border-radius: 22px;
   outline: none;
-  border: none;
   cursor: pointer;
 
   font-family: Montserrat;
