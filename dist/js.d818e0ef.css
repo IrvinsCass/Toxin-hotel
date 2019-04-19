@@ -164,6 +164,11 @@ header {
   text-transform: uppercase;
 }
 
+.subs-wrapper {
+  width: 400px;
+  height: 100px;
+}
+
 * {
   box-sizing: border-box;
 }
