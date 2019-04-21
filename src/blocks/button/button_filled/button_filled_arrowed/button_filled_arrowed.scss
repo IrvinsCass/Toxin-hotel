@@ -1,0 +1,15 @@
+.button_filled {
+  position: relative;
+
+  &_arrowed {
+    i {
+      width: 44px;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}

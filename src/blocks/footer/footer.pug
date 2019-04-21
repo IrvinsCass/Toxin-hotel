@@ -7,34 +7,50 @@ footer
     .footer-navigation
       ul.navigation-list.footer-list
         li.footer-list__item.footer-list__header Навигация
-        li.footer-list__item О нас
-        li.footer-list__item Новости
-        li.footer-list__item Служба поддержки
-        li.footer-list__item Услуги
+        li.footer-list__item 
+          a(href="") О нас
+        li.footer-list__item 
+          a(href="") Новости
+        li.footer-list__item 
+          a(href="") Служба поддержки
+        li.footer-list__item 
+          a(href="") Услуги
     .footer-about
        ul.about-list.footer-list
         li.footer-list__item.footer-list__header О нас
-        li.footer-list__item О сервисе
-        li.footer-list__item Наша команда
-        li.footer-list__item Вакансии
-        li.footer-list__item Инвесторы
+        li.footer-list__item 
+          a(href="") О сервисе
+        li.footer-list__item 
+          a(href="") Наша команда
+        li.footer-list__item 
+          a(href="") Вакансии
+        li.footer-list__item 
+          a(href="") Инвесторы
     .footer-support
       ul.support-list.footer-list
         li.footer-list__item.footer-list__header Служба поддержки
-        li.footer-list__item Соглашения
-        li.footer-list__item Сообщества
-        li.footer-list__item Связь с нами
+        li.footer-list__item 
+          a(href="") Соглашения
+        li.footer-list__item 
+          a(href="") Сообщества
+        li.footer-list__item 
+          a(href="") Связь с нами
     .footer-subscribe
       ul.subscribe-list.footer-list
         li.footer-list__item.footer-list__header Подписка
         li.footer-list__item Получайте специальные предложения и новости сервиса
+        li
+          include ../subscription-text-field/subscription-text-field
   section.copyright-contacts
     .footer-copyright
       p Copyright © 2018 Toxin отель. Все права зачищены.
     .footer-contacts
       .footer-contacts__item.twitter
-        i.fab.fa-twitter
+        a(target="_blank" rel="noopener noreferrer" href="https://twitter.com/?lang=ru")
+          i.fab.fa-twitter
       .footer-contacts__item.facebook
-        i.fab.fa-facebook
+        a(target="_blank" rel="noopener noreferrer" href="https://ru-ru.facebook.com")
+         i.fab.fa-facebook
       .footer-contacts__item.instagram
-        i.fab.fa-instagram
+        a(target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/?hl=ru")
+          i.fab.fa-instagram
