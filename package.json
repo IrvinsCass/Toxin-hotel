@@ -26,5 +26,7 @@
     "pug": "^2.0.3",
     "sass": "^1.18.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
 }

@@ -1,4 +1,3 @@
-
 import classes from '../scss/index.scss';
 
 export default () => {

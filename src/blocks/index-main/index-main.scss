@@ -1,3 +1,13 @@
 .index-main {
   position: relative;
 }
+
+.index-main__text {
+  position: absolute;
+  bottom: 18px;
+  right: 134px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
+  color: $dark75;
+}
