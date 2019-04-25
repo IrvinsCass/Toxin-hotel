@@ -1,6 +1,6 @@
 import main from './main';
-import './datepicker';
-import './jquery.nice-select';
+import '../blocks/datepicker/datepicker';
+import '../blocks/guest-setter/guest-setter';
 
 main();
 
@@ -11,12 +11,4 @@ $(document).ready(function() {
     position: "bottom center", 
     clearButton: true
   })
-
-  $('.guest-setter-input').on('blur', function() {
-    $('.guest-setter').fadeOut('medium');
-  });
-  $('.guest-setter-input').on('focus', function() {
-      $(this).siblings('.guest-setter').show();
-  });
-  $('.guest-setter').hide();
 });

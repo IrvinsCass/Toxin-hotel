@@ -1,0 +1,67 @@
+.guest-setter {
+  display: flex;
+  width: 318px;
+  flex-direction: column;
+  position: absolute;
+  border: 1px solid $dark50;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+
+  &-input:focus {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__input-header {
+    padding-left: 15px;
+    margin: 20px 0 0 0;
+    text-align: left;
+  }
+
+  &__option {
+    display: flex;
+    z-index: 999;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px 5px 15px;
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:last-child {
+      border-radius: 0 0 4px 4px;
+    }
+
+    &_clear {
+      margin: 15px 0 10px 0;
+      color: $dark50;
+      cursor: pointer;
+    }
+
+    &_confirm {
+      margin: 15px 10px 10px 0;
+      color: $purple;
+      cursor: pointer;
+    }
+  }
+}
+
+.guest-setter-controller {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+
+  &__button {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border-radius: 50%;
+    color: $dark50;
+    border: 1px solid $dark25;
+    background: transparent;
+    outline: none;
+  }
+
+}

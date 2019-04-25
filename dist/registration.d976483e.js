@@ -184,12 +184,37 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/css/nice-select.css":[function(require,module,exports) {
+},{"./bundle-url":"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/scss/main.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.d2116ab1.woff","src/scss/fonts/Montserrat-Regular.woff"],"src/scss/fonts/Montserrat-Regular.woff"],"./fonts\\quicksand.woff":[["quicksand.ef10583c.woff","src/scss/fonts/quicksand.woff"],"src/scss/fonts/quicksand.woff"],"./fonts\\quicksand.ttf":[["quicksand.bce6cbaf.ttf","src/scss/fonts/quicksand.ttf"],"src/scss/fonts/quicksand.ttf"],"./..\\..\\img\\registration-image.png":[["registration-image.8c85da33.png","img/registration-image.png"],"img/registration-image.png"],"_css_loader":"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/js/main.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _main = _interopRequireDefault(require("../scss/main.scss"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _default = function _default() {
+  console.log('All loaded');
+};
+
+exports.default = _default;
+},{"../scss/main.scss":"src/scss/main.scss"}],"src/js/registration.js":[function(require,module,exports) {
+"use strict";
+
+var _main = _interopRequireDefault(require("./main"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _main.default)();
+},{"./main":"src/js/main.js"}],"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +242,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49950" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61581" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -392,5 +417,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/nice-select.9078f7ab.js.map
+},{}]},{},["C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/js/registration.js"], null)
+//# sourceMappingURL=/registration.d976483e.js.map

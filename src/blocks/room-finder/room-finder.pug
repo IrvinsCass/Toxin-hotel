@@ -1,29 +1,6 @@
 .room-finder
-  h3.room-finder__header Найдём номера под ваши пожелания
-  .room-finder__input-header Прибытие
-  .room-finder__input-header Выезд
-  input(type="text" placeholder="ДД.ММ.ГГГГ").datepicker-plugin.text-input
-  .room-finder__input-header Гости
-  input(type="text" placeholder="Сколько гостей").text-input.guest-setter-input
-  .guest-setter
-    .guest-setter__option
-      .guest-setter__option__adult Взрослые
-      .guest-setter-controller
-        button.guest-setter-controller__button -
-        .guest-counter.adult-counter 0
-        button.guest-setter-controller__button +
-    .guest-setter__option
-      .guest-setter__option__child Дети
-      .guest-setter-controller
-        button.guest-setter-controller__button -
-        .guest-counter.child-counter 0
-        button.guest-setter-controller__button +
-    .guest-setter__option
-      .guest-setter__option__baby Младенцы
-      .guest-setter-controller
-        button.guest-setter-controller__button -
-        .guest-counter.baby-counter 0
-        button.guest-setter-controller__button +
-    .guest-setter__option
-      .guest-setter__option_clear Очистить
-      .guest-setter__option_confirm Применить
+  h1.room-finder__header Найдём номера под ваши пожелания
+  include ../datepicker/datepicker
+  include ../guest-setter/guest-setter
+  button.button.room-finder__button.button_filled.button_filled_arrowed Подобрать номер
+    i.material-icons arrow_forward
