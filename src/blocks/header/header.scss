@@ -36,12 +36,12 @@ header {
   }
 
   &__login-button {
-    width: 87px;
+    width: 87px !important; 
     height: 34px;
   }
 
   &__register-button {
-    width: 196px;
+    width: 196px !important;
     height: 34px;
   }
 }

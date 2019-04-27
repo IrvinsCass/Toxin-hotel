@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/scss/main.scss":[function(require,module,exports) {
+},{"./bundle-url":"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/scss/main.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.d2116ab1.woff","src/scss/fonts/Montserrat-Regular.woff"],"src/scss/fonts/Montserrat-Regular.woff"],"./fonts\\quicksand.woff":[["quicksand.ef10583c.woff","src/scss/fonts/quicksand.woff"],"src/scss/fonts/quicksand.woff"],"./fonts\\quicksand.ttf":[["quicksand.bce6cbaf.ttf","src/scss/fonts/quicksand.ttf"],"src/scss/fonts/quicksand.ttf"],"_css_loader":"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/js/main.js":[function(require,module,exports) {
+},{"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.d2116ab1.woff","src/scss/fonts/Montserrat-Regular.woff"],"src/scss/fonts/Montserrat-Regular.woff"],"./fonts\\quicksand.woff":[["quicksand.ef10583c.woff","src/scss/fonts/quicksand.woff"],"src/scss/fonts/quicksand.woff"],"./fonts\\quicksand.ttf":[["quicksand.bce6cbaf.ttf","src/scss/fonts/quicksand.ttf"],"src/scss/fonts/quicksand.ttf"],"./..\\..\\img\\registration-image.png":[["registration-image.8c85da33.png","img/registration-image.png"],"img/registration-image.png"],"_css_loader":"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/js/main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2411,8 +2411,12 @@ $(document).ready(function () {
     position: "bottom center",
     clearButton: true
   });
+  $('.registration-field__datepicker').datepicker({
+    position: "bottom center",
+    clearButton: true
+  });
 });
-},{"./main":"src/js/main.js","../blocks/datepicker/datepicker":"src/blocks/datepicker/datepicker.js","../blocks/guest-setter/guest-setter":"src/blocks/guest-setter/guest-setter.js"}],"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./main":"src/js/main.js","../blocks/datepicker/datepicker":"src/blocks/datepicker/datepicker.js","../blocks/guest-setter/guest-setter":"src/blocks/guest-setter/guest-setter.js"}],"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2440,7 +2444,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61494" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60159" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2615,5 +2619,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/js/index.js"], null)
+},{}]},{},["C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/js/index.js"], null)
 //# sourceMappingURL=/js.d818e0ef.js.map

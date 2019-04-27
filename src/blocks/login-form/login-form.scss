@@ -1,8 +1,8 @@
-.registration-field {
+.login-field {
   width: 100%;
   padding: 30px 30px 30px 30px;
   max-width: 380px;
-  height: 646px;
+  height: 358px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
@@ -13,30 +13,15 @@
     margin-bottom: 15px;
   }
 
-  &__h3-header {
-    margin-top: 20px;
-  }
-
   &__text-field {
     margin: 5px 0;
   }
 
-  &-radio-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 5px 0 0 0;
+  &__login-button {
+    margin-top: 20px;
   }
 
-  &-radiobutton {
-    margin-right: 20px;
-  }
-
-  &-toggle-container {
-    margin: 5px 0 20px 0;
-  }
-
-  &-enter {
+  &-register {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

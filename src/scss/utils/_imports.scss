@@ -3,12 +3,14 @@
 @import '../../blocks/header/header';
 @import '../../blocks/footer/footer';
 @import '../../blocks/button/button';
-@import '../../blocks/index-main/index-main';
+@import '../../blocks/index-page/index-page';
 @import '../../blocks/room-finder/room-finder';
 @import '../../blocks/datepicker/datepicker';
 @import '../../blocks/text-field/text-field';
 @import '../../blocks/guest-setter/guest-setter.scss';
-@import '../../blocks/registration-page/registration-page';
+@import '../../blocks/login-registration-page/login-registration-page';
 @import '../../blocks/registration-form/registration-form';
+@import '../../blocks/login-form/login-form';
 @import '../../blocks/radiobutton/radiobutton';
 @import '../../blocks/checkbox/checkbox';
+@import '../../blocks/toggle-switcher/toggle-switcher';

@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -13,6 +15,8 @@ body {
   flex-direction: column;
   margin: 0 auto;
   font-family: 'Montserrat';
+  font-size: 14px;
+  color: $dark75;
 }
 
 h1 {
@@ -20,7 +24,7 @@ h1 {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  line-height: normal;
+  line-height: 1;
   color: $dark100;
 }
 

@@ -4,7 +4,7 @@
   flex-direction: row; 
   align-items: flex-start;
   position: relative;
-  padding-left: 35px;
+  padding-left: 30px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 14px;
@@ -17,7 +17,7 @@
 }
 
 /* Hide the browser's default radio button */
-.radiobutton-container input {
+.radiobutton__container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -36,7 +36,7 @@
 }
 
 /* When the radio button is checked, add a blue background */
-.radiobutton-container input:checked ~ .radiobutton__checkmark {
+.radiobutton__container input:checked ~ .radiobutton__checkmark {
   background-color: #fff;
   border: 1px solid $purple;
   color: $dark75;
@@ -50,12 +50,12 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.radiobutton-container input:checked ~ .radiobutton__checkmark:after {
+.radiobutton__container input:checked ~ .radiobutton__checkmark:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.radiobutton-container .radiobutton__checkmark:after {
+.radiobutton__container .radiobutton__checkmark:after {
  	top: 2px;
 	left: 2px;
 	width: 12px;
