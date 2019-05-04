@@ -5,6 +5,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"), local("MontserratBold"), url("/Montserrat-Bold.5ac84db1.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "Quicksand";
   src: local("Quicksand"), local("Quicksand-Regular"), url("/quicksand.ef10583c.woff") format("woff"), url("/quicksand.bce6cbaf.ttf") format("truetype");
   font-weight: normal;
@@ -138,7 +144,7 @@ header {
   color: rgba(31, 32, 65, 0.75);
 }
 .footer-list__header {
-  font-weight: 700;
+  font-family: "Montserrat-Bold";
   text-transform: uppercase;
   color: #1F2041;
 }
@@ -231,26 +237,6 @@ header {
   text-transform: uppercase;
 }
 
-.index-main {
-  position: relative;
-}
-
-.room-finder {
-  position: absolute;
-  left: 140px;
-  top: 70px;
-}
-
-.index-main__text {
-  position: absolute;
-  bottom: 18px;
-  right: 134px;
-  font-size: 14px;
-  line-height: 24px;
-  text-align: right;
-  color: rgba(31, 32, 65, 0.75);
-}
-
 .room-finder {
   width: 380px;
   height: 374px;
@@ -268,13 +254,6 @@ header {
   margin-top: 20px;
 }
 
-.datepicker-plugin__header {
-  display: inline-block;
-  width: 50%;
-  padding-left: 15px;
-  margin: 10px 0 0 0;
-}
-
 .text-field {
   width: 100%;
   height: 44px;
@@ -284,6 +263,7 @@ header {
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 4px;
+  background: transparent;
 }
 .text-field::-webkit-input-placeholder {
   color: rgba(31, 32, 65, 0.25);
@@ -307,7 +287,7 @@ header {
 
 .guest-setter {
   display: flex;
-  width: 318px;
+  width: 264.8px;
   flex-direction: column;
   position: absolute;
   border: 1px solid rgba(31, 32, 65, 0.5);
@@ -318,8 +298,8 @@ header {
   border-radius: 4px 4px 0 0;
 }
 .guest-setter__input-header {
-  padding-left: 15px;
-  margin: 20px 0 0 0;
+  font-family: "Montserrat-Bold";
+  margin: 20px 0 5px 0;
   text-align: left;
 }
 .guest-setter__option {
@@ -362,15 +342,6 @@ header {
   border: 1px solid rgba(31, 32, 65, 0.25);
   background: transparent;
   outline: none;
-}
-
-.login-registration-page {
-  width: 100%;
-  height: 698px;
-  background-image: url(/login-registration-image.6618d6b9.png);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .registration-field {
@@ -524,7 +495,6 @@ header {
   display: block;
   position: relative;
   padding-left: 25px;
-  margin-bottom: 12px;
   cursor: pointer;
   color: rgba(31, 32, 65, 0.5);
   font-size: 14px;
@@ -654,6 +624,323 @@ input:checked + .toggle-switcher__slider:before {
   border-radius: 50%;
 }
 
+.checkbox-list-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.checkbox-list-content {
+  list-style: none;
+  margin-top: 17.5px;
+}
+.checkbox-list-content__item {
+  margin-bottom: 11px;
+}
+
+.star_filled, .star_empty {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.room {
+  overflow: hidden;
+  width: 270px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  position: relative;
+}
+.room__image-slider {
+  position: absolute;
+  display: inline-flex;
+  right: 5px;
+  top: 129px;
+  list-style: none;
+}
+.room__image-slider li {
+  width: 7.5px;
+  height: 7.5px;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+.room__image-slider_filled {
+  background-color: #fff;
+}
+.room__image-slider_empty {
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+.room-description {
+  padding: 20px 17px 19px 20px;
+}
+.room-description-top, .room-description-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  line-height: 1;
+  font-family: Montserrat-Bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+}
+.room-description-top__room-number, .room-description-bottom__room-number {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: #1F2041;
+}
+.room-description-top__room-number_number, .room-description-bottom__room-number_number {
+  font-size: 19px;
+  margin-left: 5px;
+  line-height: 0.9;
+}
+.room-description-top__room-number_lux, .room-description-bottom__room-number_lux {
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.room-description-top__room-price, .room-description-bottom__room-price {
+  font-size: 14px;
+}
+.room-description-top__room-price span, .room-description-bottom__room-price span {
+  font-family: Montserrat;
+  font-size: 12px;
+}
+.room-description-bottom {
+  align-items: center;
+  margin-top: 10px;
+  padding-bottom: 0;
+  border: none;
+}
+.room-description-bottom__feedback span {
+  font-family: Montserrat;
+  font-size: 12px;
+}
+
+.slider-container {
+  width: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.slider-container .back-bar {
+  height: 10px;
+  position: relative;
+}
+
+.slider-container .back-bar .selected-bar {
+  position: absolute;
+  height: 100%;
+}
+
+.slider-container .back-bar .pointer {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  cursor: col-resize;
+  opacity: 1;
+  z-index: 2;
+}
+
+.slider-container .back-bar .pointer.last-active {
+  z-index: 3;
+}
+
+.slider-container .back-bar .pointer-label {
+  position: absolute;
+  top: -17px;
+  font-size: 8px;
+  background: white;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.slider-container .back-bar .focused {
+  z-index: 10;
+}
+
+.slider-container .clickable-dummy {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.slider-container .scale {
+  top: 2px;
+  position: relative;
+}
+
+.slider-container .scale span {
+  position: absolute;
+  height: 5px;
+  border-left: 1px solid #999;
+  font-size: 0;
+}
+
+.slider-container .scale ins {
+  font-size: 9px;
+  text-decoration: none;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  color: #999;
+  line-height: 1;
+}
+
+.slider-container.slider-readonly .clickable-dummy,
+.slider-container.slider-readonly .pointer {
+  cursor: auto;
+}
+
+.theme-green .back-bar {
+  height: 6px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffeeeeee", endColorstr="#ffdddddd", GradientType=0);
+}
+
+.theme-green .back-bar .selected-bar {
+  border-radius: 4px;
+  border: 0px solid rgba(31, 32, 65, 0.25);
+  background-color: #fff;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffbdfade", endColorstr="#ff76fabc", GradientType=0);
+}
+
+.theme-green .back-bar .pointer {
+  width: 14px;
+  height: 14px;
+  top: -5px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffeeeeee", endColorstr="#ffdddddd", GradientType=0);
+}
+
+.theme-green .back-bar .pointer-label {
+  color: #999;
+}
+
+.theme-green .back-bar .focused {
+  color: #333;
+}
+
+.theme-green .scale span {
+  border-left: 1px solid #e5e5e5;
+}
+
+.theme-green .scale ins {
+  color: #999;
+  display: none;
+}
+
+.index-main {
+  position: relative;
+}
+
+.room-finder {
+  position: absolute;
+  left: 140px;
+  top: 70px;
+}
+
+.index-main__text {
+  position: absolute;
+  bottom: 18px;
+  right: 134px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.login-registration-page {
+  width: 100%;
+  height: 698px;
+  background-image: url(/login-registration-image.6618d6b9.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-page {
+  width: 100%;
+  background-color: rgba(31, 32, 65, 0.05);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 140px;
+}
+.search-page-settings {
+  width: 28%;
+  padding: 20px 60px 0 0;
+}
+.search-page-datepicker {
+  margin-bottom: 20px;
+}
+.search-page-datepicker__header {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.search-page-range-slider {
+  margin-top: 20px;
+}
+.search-page-range-slider__header {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-page-range-slider__prices-output {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.search-page-range-slider__footer {
+  margin-top: 11px;
+  font-size: 12px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.search-page-checkboxes {
+  margin-top: 30px;
+}
+.search-page-checkboxes__header {
+  margin-bottom: 11px;
+}
+.search-page-checkboxes__item {
+  margin-bottom: 10px;
+}
+.search-page-content {
+  width: 72%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.search-page-content__header {
+  display: block;
+  width: 100%;
+  margin-bottom: 20.5px;
+}
+.search-page-content__item {
+  margin-bottom: 20px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -673,23 +960,25 @@ body {
   color: rgba(31, 32, 65, 0.75);
 }
 
-h1 {
-  font-family: Montserrat;
+h1, h2, h3 {
+  font-family: "Montserrat-Bold";
   font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
   line-height: 1;
   color: #1F2041;
 }
 
-h3 {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: normal;
-  text-transform: uppercase;
-  color: rgba(31, 32, 65, 0.75);
+h1 {
+  font-size: 24px;
 }
 
-/*# sourceMappingURL=/registration.d976483e.css.map */
+h2 {
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=/search.27395141.css.map */

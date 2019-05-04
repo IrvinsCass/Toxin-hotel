@@ -1,25 +1,26 @@
-.guest-setter-wrapper
-  h3.guest-setter__input-header Гости
-  input(type="text" placeholder="Сколько гостей").text-field.guest-setter-input
-  .guest-setter
-    .guest-setter__option
-      .guest-setter__option__adult Взрослые
-      .guest-setter-controller
-        button.guest-setter-controller__button -
-        .guest-counter.adult-counter 0
-        button.guest-setter-controller__button +
-    .guest-setter__option
-      .guest-setter__option__child Дети
-      .guest-setter-controller
-        button.guest-setter-controller__button -
-        .guest-counter.child-counter 0
-        button.guest-setter-controller__button +
-    .guest-setter__option
-      .guest-setter__option__baby Младенцы
-      .guest-setter-controller
-        button.guest-setter-controller__button -
-        .guest-counter.baby-counter 0
-        button.guest-setter-controller__button +
-    .guest-setter__option
-      .guest-setter__option_clear Очистить
-      .guest-setter__option_confirm Применить
+mixin dropdown
+  .guest-setter-wrapper
+    h3.guest-setter__input-header Гости
+    input(type="text" placeholder="Сколько гостей").text-field.guest-setter-input
+    .guest-setter
+      .guest-setter__option
+        .guest-setter__option__adult Взрослые
+        .guest-setter-controller
+          button.guest-setter-controller__button -
+          .guest-counter.adult-counter 0
+          button.guest-setter-controller__button +
+      .guest-setter__option
+        .guest-setter__option__child Дети
+        .guest-setter-controller
+          button.guest-setter-controller__button -
+          .guest-counter.child-counter 0
+          button.guest-setter-controller__button +
+      .guest-setter__option
+        .guest-setter__option__baby Младенцы
+        .guest-setter-controller
+          button.guest-setter-controller__button -
+          .guest-counter.baby-counter 0
+          button.guest-setter-controller__button +
+      .guest-setter__option
+        .guest-setter__option_clear Очистить
+        .guest-setter__option_confirm Применить

@@ -5,6 +5,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"), local("MontserratBold"), url("/Montserrat-Bold.5ac84db1.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "Quicksand";
   src: local("Quicksand"), local("Quicksand-Regular"), url("/quicksand.ef10583c.woff") format("woff"), url("/quicksand.bce6cbaf.ttf") format("truetype");
   font-weight: normal;
@@ -46,11 +52,11 @@ header {
   margin-right: 20px;
 }
 .navbar__login-button {
-  width: 87px;
+  width: 87px !important;
   height: 34px;
 }
 .navbar__register-button {
-  width: 196px;
+  width: 196px !important;
   height: 34px;
 }
 
@@ -138,7 +144,7 @@ header {
   color: rgba(31, 32, 65, 0.75);
 }
 .footer-list__header {
-  font-weight: 700;
+  font-family: "Montserrat-Bold";
   text-transform: uppercase;
   color: #1F2041;
 }
@@ -218,6 +224,8 @@ header {
 }
 
 .button {
+  width: 100%;
+  height: 44px;
   border-radius: 22px;
   outline: none;
   cursor: pointer;
@@ -227,26 +235,6 @@ header {
   font-size: 12px;
   line-height: normal;
   text-transform: uppercase;
-}
-
-.index-main {
-  position: relative;
-}
-
-.room-finder {
-  position: absolute;
-  left: 140px;
-  top: 70px;
-}
-
-.index-main__text {
-  position: absolute;
-  bottom: 18px;
-  right: 134px;
-  font-size: 14px;
-  line-height: 24px;
-  text-align: right;
-  color: rgba(31, 32, 65, 0.75);
 }
 
 .room-finder {
@@ -263,16 +251,15 @@ header {
 }
 
 .room-finder__button {
-  width: 100%;
-  height: 44px;
   margin-top: 20px;
 }
 
 .datepicker-plugin__header {
+  font-family: "Montserrat-Bold";
   display: inline-block;
   width: 50%;
   padding-left: 15px;
-  margin: 10px 0 0 0;
+  margin: 10px 0 5px 0;
 }
 
 .text-field {
@@ -318,8 +305,9 @@ header {
   border-radius: 4px 4px 0 0;
 }
 .guest-setter__input-header {
+  font-family: "Montserrat-Bold";
   padding-left: 15px;
-  margin: 20px 0 0 0;
+  margin: 20px 0 5px 0;
   text-align: left;
 }
 .guest-setter__option {
@@ -364,18 +352,9 @@ header {
   outline: none;
 }
 
-.registration-main {
-  width: 100%;
-  height: 698px;
-  background-image: url(/registration-image.8c85da33.png);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .registration-field {
   width: 100%;
-  padding: 40px 30px 30px 30px;
+  padding: 30px 30px 30px 30px;
   max-width: 380px;
   height: 646px;
   background: #FFFFFF;
@@ -384,8 +363,11 @@ header {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.registration-field__header {
+.registration-field__h1-header {
   margin-bottom: 15px;
+}
+.registration-field__h3-header {
+  margin-top: 20px;
 }
 .registration-field__text-field {
   margin: 5px 0;
@@ -394,10 +376,60 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 5px 0 20px 0;
+  margin: 5px 0 0 0;
 }
 .registration-field-radiobutton {
   margin-right: 20px;
+}
+.registration-field-toggle-container {
+  margin: 5px 0 20px 0;
+}
+.registration-field-enter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.registration-field-enter__text {
+  color: #000;
+}
+.registration-field-enter__button {
+  width: 99px;
+}
+
+.login-field {
+  width: 100%;
+  padding: 30px 30px 30px 30px;
+  max-width: 380px;
+  height: 358px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.login-field__h1-header {
+  margin-bottom: 15px;
+}
+.login-field__text-field {
+  margin: 5px 0;
+}
+.login-field__login-button {
+  margin-top: 20px;
+}
+.login-field-register {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.login-field-register__text {
+  color: #000;
+}
+.login-field-register__button {
+  width: 99px;
 }
 
 /* The container */
@@ -471,7 +503,6 @@ header {
   display: block;
   position: relative;
   padding-left: 25px;
-  margin-bottom: 12px;
   cursor: pointer;
   color: rgba(31, 32, 65, 0.5);
   font-size: 14px;
@@ -541,6 +572,16 @@ header {
   height: 20px;
 }
 
+.toggle-switcher__desription {
+  display: block;
+  width: 100%;
+  min-width: 300px;
+  max-width: 340px;
+  padding-left: 50px;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
 /* Hide default HTML checkbox */
 .toggle-switcher input {
   opacity: 0;
@@ -591,6 +632,168 @@ input:checked + .toggle-switcher__slider:before {
   border-radius: 50%;
 }
 
+.checkbox-list-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.checkbox-list-content {
+  list-style: none;
+  margin-top: 17.5px;
+}
+.checkbox-list-content__item {
+  margin-bottom: 11px;
+}
+
+.star_filled, .star_empty {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.room {
+  overflow: hidden;
+  width: 270px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  position: relative;
+}
+.room__image-slider {
+  position: absolute;
+  display: inline-flex;
+  right: 5px;
+  top: 129px;
+  list-style: none;
+}
+.room__image-slider li {
+  width: 7.5px;
+  height: 7.5px;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+.room__image-slider_filled {
+  background-color: #fff;
+}
+.room__image-slider_empty {
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+.room-description {
+  padding: 20px 17px 19px 20px;
+}
+.room-description-top, .room-description-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  line-height: 1;
+  font-family: Montserrat-Bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+}
+.room-description-top__room-number, .room-description-bottom__room-number {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: #1F2041;
+}
+.room-description-top__room-number_number, .room-description-bottom__room-number_number {
+  font-size: 19px;
+  margin-left: 5px;
+  line-height: 0.9;
+}
+.room-description-top__room-number_lux, .room-description-bottom__room-number_lux {
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.room-description-top__room-price, .room-description-bottom__room-price {
+  font-size: 14px;
+}
+.room-description-top__room-price span, .room-description-bottom__room-price span {
+  font-family: Montserrat;
+  font-size: 12px;
+}
+.room-description-bottom {
+  align-items: center;
+  margin-top: 10px;
+  padding-bottom: 0;
+  border: none;
+}
+.room-description-bottom__feedback span {
+  font-family: Montserrat;
+  font-size: 12px;
+}
+
+.index-main {
+  position: relative;
+}
+
+.room-finder {
+  position: absolute;
+  left: 140px;
+  top: 70px;
+}
+
+.index-main__text {
+  position: absolute;
+  bottom: 18px;
+  right: 134px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.login-registration-page {
+  width: 100%;
+  height: 698px;
+  background-image: url(/login-registration-image.6618d6b9.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-page {
+  width: 100%;
+  background-color: rgba(31, 32, 65, 0.05);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 140px;
+}
+.search-page-settings {
+  width: 28%;
+  padding: 20px 60px 0 0;
+}
+.search-page-settings-datepicker__header {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.search-page-content {
+  width: 72%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.search-page-content__header {
+  display: block;
+  width: 100%;
+  margin-bottom: 20.5px;
+}
+.search-page-content__item {
+  margin-bottom: 20px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -606,25 +809,29 @@ body {
   flex-direction: column;
   margin: 0 auto;
   font-family: "Montserrat";
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
-h1 {
-  font-family: Montserrat;
+h1, h2, h3 {
+  font-family: "Montserrat-Bold";
   font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
   line-height: 1;
   color: #1F2041;
 }
 
-h3 {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: normal;
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 19px;
   text-transform: uppercase;
-  color: rgba(31, 32, 65, 0.75);
+}
+
+h3 {
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=/js.d818e0ef.css.map */

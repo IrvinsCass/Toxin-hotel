@@ -1,6 +1,6 @@
 .guest-setter {
   display: flex;
-  width: 318px;
+  width: 264.8px;
   flex-direction: column;
   position: absolute;
   border: 1px solid $dark50;
@@ -12,8 +12,8 @@
   }
 
   &__input-header {
-    padding-left: 15px;
-    margin: 20px 0 0 0;
+    font-family: 'Montserrat-Bold';
+    margin: 20px 0 5px 0;
     text-align: left;
   }
 

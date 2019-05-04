@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.d2116ab1.woff","src/scss/fonts/Montserrat-Regular.woff"],"src/scss/fonts/Montserrat-Regular.woff"],"./fonts\\quicksand.woff":[["quicksand.ef10583c.woff","src/scss/fonts/quicksand.woff"],"src/scss/fonts/quicksand.woff"],"./fonts\\quicksand.ttf":[["quicksand.bce6cbaf.ttf","src/scss/fonts/quicksand.ttf"],"src/scss/fonts/quicksand.ttf"],"./..\\..\\img\\registration-image.png":[["registration-image.8c85da33.png","img/registration-image.png"],"img/registration-image.png"],"_css_loader":"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/js/main.js":[function(require,module,exports) {
+},{"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.d2116ab1.woff","src/scss/fonts/Montserrat-Regular.woff"],"src/scss/fonts/Montserrat-Regular.woff"],"./fonts\\Montserrat-Bold.woff":[["Montserrat-Bold.5ac84db1.woff","src/scss/fonts/Montserrat-Bold.woff"],"src/scss/fonts/Montserrat-Bold.woff"],"./fonts\\quicksand.woff":[["quicksand.ef10583c.woff","src/scss/fonts/quicksand.woff"],"src/scss/fonts/quicksand.woff"],"./fonts\\quicksand.ttf":[["quicksand.bce6cbaf.ttf","src/scss/fonts/quicksand.ttf"],"src/scss/fonts/quicksand.ttf"],"./..\\..\\img\\login-registration-image.png":[["login-registration-image.6618d6b9.png","img/login-registration-image.png"],"img/login-registration-image.png"],"_css_loader":"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/js/main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2387,6 +2387,11 @@ $(document).ready(function () {
   $('.guest-setter__option_confirm').on('click', function () {
     $('.guest-setter').hide();
   });
+  $(document).on('click', function (e) {
+    if ($(e.target).closest(".guest-setter-wrapper").length === 0) {
+      $(".guest-setter").hide();
+    }
+  });
   $('.guest-setter-input').on('focus', function () {
     $(this).siblings('.guest-setter').show();
   });
@@ -2408,10 +2413,6 @@ $(document).ready(function () {
   $('.datepicker-plugin').datepicker({
     range: true,
     multipleDatesSeparator: "                       ",
-    position: "bottom center",
-    clearButton: true
-  });
-  $('.registration-field__datepicker').datepicker({
     position: "bottom center",
     clearButton: true
   });
@@ -2444,7 +2445,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60159" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63083" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

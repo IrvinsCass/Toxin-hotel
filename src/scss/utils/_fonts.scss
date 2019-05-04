@@ -7,6 +7,13 @@
 }
 
 @font-face {
+  font-family: 'Montserrat-Bold';
+  src: local('Montserrat-Bold'), local('MontserratBold'), url('./fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Quicksand';
   src: local('Quicksand'), local('Quicksand-Regular'), url('./fonts/quicksand.woff') format('woff'), url('./fonts/quicksand.ttf') format('truetype');
   font-weight: normal;

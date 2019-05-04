@@ -1,0 +1,24 @@
+include ../rate-button/rate-button
+mixin room(image, roomNumber, roomPrice, feedback, stars, roomLux)
+  .room
+    img(src=image)
+    ul.room__image-slider
+      li.room__image-slider_filled
+      li.room__image-slider_empty
+      li.room__image-slider_empty
+      li.room__image-slider_empty
+    .room-description
+      .room-description-top 
+        .room-description-top__room-number №
+          span.room-description-top__room-number_number= roomNumber
+          span.room-description-top__room-number_lux= roomLux
+        .room-description-top__room-price= roomPrice
+          | &#8381;
+          span  в сутки
+      .room-description-bottom
+        .room-description-bottom__rating
+          +stars_4
+        .room-description-bottom__feedback= feedback
+          span  отзывов
+
+

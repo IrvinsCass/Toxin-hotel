@@ -1,0 +1,78 @@
+.search-page {
+  width: 100%;
+  background-color: $dark5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 140px;
+
+  &-settings {
+    width: 28%;
+    padding: 20px 60px 0 0;
+  }
+
+  &-datepicker {
+    margin-bottom: 20px;
+
+    &__header {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+
+  &-range-slider {
+    margin-top: 20px;
+
+    &__header {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__prices-output {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__footer {
+      margin-top: 11px;
+      font-size: 12px;
+      color: $dark50;
+    }
+  }
+
+  &-checkboxes {
+    margin-top: 30px;
+
+    &__header {
+      margin-bottom: 11px;
+    }
+
+    &__item {
+      margin-bottom: 10px;
+    }
+  }
+
+  &-content {
+    width: 72%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+
+    &__header {
+      display: block;
+      width: 100%;
+      margin-bottom: 20.5px;
+    }
+    &__item {
+      margin-bottom: 20px;
+    }
+  }
+}

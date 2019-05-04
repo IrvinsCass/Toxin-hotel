@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.d2116ab1.woff","src/scss/fonts/Montserrat-Regular.woff"],"src/scss/fonts/Montserrat-Regular.woff"],"./fonts\\quicksand.woff":[["quicksand.ef10583c.woff","src/scss/fonts/quicksand.woff"],"src/scss/fonts/quicksand.woff"],"./fonts\\quicksand.ttf":[["quicksand.bce6cbaf.ttf","src/scss/fonts/quicksand.ttf"],"src/scss/fonts/quicksand.ttf"],"./..\\..\\img\\login-registration-image.png":[["login-registration-image.6618d6b9.png","img/login-registration-image.png"],"img/login-registration-image.png"],"_css_loader":"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/js/main.js":[function(require,module,exports) {
+},{"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.d2116ab1.woff","src/scss/fonts/Montserrat-Regular.woff"],"src/scss/fonts/Montserrat-Regular.woff"],"./fonts\\Montserrat-Bold.woff":[["Montserrat-Bold.5ac84db1.woff","src/scss/fonts/Montserrat-Bold.woff"],"src/scss/fonts/Montserrat-Bold.woff"],"./fonts\\quicksand.woff":[["quicksand.ef10583c.woff","src/scss/fonts/quicksand.woff"],"src/scss/fonts/quicksand.woff"],"./fonts\\quicksand.ttf":[["quicksand.bce6cbaf.ttf","src/scss/fonts/quicksand.ttf"],"src/scss/fonts/quicksand.ttf"],"./..\\..\\img\\login-registration-image.png":[["login-registration-image.6618d6b9.png","img/login-registration-image.png"],"img/login-registration-image.png"],"_css_loader":"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/js/main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -206,7 +206,29 @@ var _default = function _default() {
 };
 
 exports.default = _default;
-},{"../scss/main.scss":"src/scss/main.scss"}],"src/blocks/datepicker/datepicker.js":[function(require,module,exports) {
+},{"../scss/main.scss":"src/scss/main.scss"}],"src/blocks/checkbox-list/checkbox-list.js":[function(require,module,exports) {
+$(document).ready(function () {
+  $(".checkbox-list-content").hide();
+  $(".checkbox-list-header").click(function () {
+    $(".checkbox-list-content").slideToggle("fast");
+  });
+  var rotated = false;
+  $(".checkbox-list-header").click(function () {
+    if (!rotated) {
+      $(this).find(".checkbox-list-header__arrow").css({
+        "transform": "rotate(180deg)"
+      });
+    } else {
+      $(this).find(".checkbox-list-header__arrow").css({
+        "transform": "rotate(0deg)"
+      });
+    } // Toggle the flag
+
+
+    rotated = !rotated;
+  });
+});
+},{}],"src/blocks/datepicker/datepicker.js":[function(require,module,exports) {
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 ;
@@ -2382,23 +2404,483 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
   })();
 })(window, jQuery);
-},{}],"src/js/registration.js":[function(require,module,exports) {
+},{}],"src/blocks/guest-setter/guest-setter.js":[function(require,module,exports) {
+$(document).ready(function () {
+  $('.guest-setter__option_confirm').on('click', function () {
+    $('.guest-setter').hide();
+  });
+  $(document).on('click', function (e) {
+    if ($(e.target).closest(".guest-setter-wrapper").length === 0) {
+      $(".guest-setter").hide();
+    }
+  });
+  $('.guest-setter-input').on('focus', function () {
+    $(this).siblings('.guest-setter').show();
+  });
+  $('.guest-setter').hide();
+});
+},{}],"src/blocks/range-slider/range-slider.js":[function(require,module,exports) {
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/*jshint multistr:true, curly: false */
+
+/*global jQuery:false, define: false */
+
+/**
+ * jRange - Awesome range control
+ *
+ * Written by
+ * ----------
+ * Nitin Hayaran (nitinhayaran@gmail.com)
+ *
+ * Licensed under the MIT (MIT-LICENSE.txt).
+ *
+ * @author Nitin Hayaran
+ * @version 0.1-RELEASE
+ *
+ * Dependencies
+ * ------------
+ * jQuery (http://jquery.com)
+ *
+ **/
+;
+
+(function ($, window, document, undefined) {
+  'use strict';
+
+  var jRange = function jRange() {
+    return this.init.apply(this, arguments);
+  };
+
+  jRange.prototype = {
+    defaults: {
+      onstatechange: function onstatechange() {},
+      ondragend: function ondragend() {},
+      onbarclicked: function onbarclicked() {},
+      isRange: false,
+      showLabels: false,
+      showScale: false,
+      step: 1,
+      format: '%s',
+      theme: 'theme-green',
+      width: 266,
+      disable: false,
+      snap: false
+    },
+    template: '<div class="slider-container">\
+			<div class="back-bar">\
+                <div class="selected-bar"></div>\
+                <div class="pointer low"></div><div class="pointer-label low">123456</div>\
+                <div class="pointer high"></div><div class="pointer-label high">456789</div>\
+                <div class="clickable-dummy"></div>\
+            </div>\
+            <div class="scale"></div>\
+		</div>',
+    init: function init(node, options) {
+      this.options = $.extend({}, this.defaults, options);
+      this.inputNode = $(node);
+      this.options.value = this.inputNode.val() || (this.options.isRange ? this.options.from + ',' + this.options.from : '' + this.options.from);
+      this.domNode = $(this.template);
+      this.domNode.addClass(this.options.theme);
+      this.inputNode.after(this.domNode);
+      this.domNode.on('change', this.onChange);
+      this.pointers = $('.pointer', this.domNode);
+      this.lowPointer = this.pointers.first();
+      this.highPointer = this.pointers.last();
+      this.labels = $('.pointer-label', this.domNode);
+      this.lowLabel = this.labels.first();
+      this.highLabel = this.labels.last();
+      this.scale = $('.scale', this.domNode);
+      this.bar = $('.selected-bar', this.domNode);
+      this.clickableBar = this.domNode.find('.clickable-dummy');
+      this.interval = this.options.to - this.options.from;
+      this.render();
+    },
+    render: function render() {
+      // Check if inputNode is visible, and have some width, so that we can set slider width accordingly.
+      if (this.inputNode.width() === 0 && !this.options.width) {
+        console.log('jRange : no width found, returning');
+        return;
+      } else {
+        this.options.width = this.options.width || this.inputNode.width();
+        this.domNode.width(this.options.width);
+        this.inputNode.hide();
+      }
+
+      if (this.isSingle()) {
+        this.lowPointer.hide();
+        this.lowLabel.hide();
+      }
+
+      if (!this.options.showLabels) {
+        this.labels.hide();
+      }
+
+      this.attachEvents();
+
+      if (this.options.showScale) {
+        this.renderScale();
+      }
+
+      this.setValue(this.options.value);
+    },
+    isSingle: function isSingle() {
+      if (typeof this.options.value === 'number') {
+        return true;
+      }
+
+      return this.options.value.indexOf(',') !== -1 || this.options.isRange ? false : true;
+    },
+    attachEvents: function attachEvents() {
+      this.clickableBar.click($.proxy(this.barClicked, this));
+      this.pointers.on('mousedown touchstart', $.proxy(this.onDragStart, this));
+      this.pointers.bind('dragstart', function (event) {
+        event.preventDefault();
+      });
+    },
+    onDragStart: function onDragStart(e) {
+      if (this.options.disable || e.type === 'mousedown' && e.which !== 1) {
+        return;
+      }
+
+      e.stopPropagation();
+      e.preventDefault();
+      var pointer = $(e.target);
+      this.pointers.removeClass('last-active');
+      pointer.addClass('focused last-active');
+      this[(pointer.hasClass('low') ? 'low' : 'high') + 'Label'].addClass('focused');
+      $(document).on('mousemove.slider touchmove.slider', $.proxy(this.onDrag, this, pointer));
+      $(document).on('mouseup.slider touchend.slider touchcancel.slider', $.proxy(this.onDragEnd, this));
+    },
+    onDrag: function onDrag(pointer, e) {
+      e.stopPropagation();
+      e.preventDefault();
+
+      if (e.originalEvent.touches && e.originalEvent.touches.length) {
+        e = e.originalEvent.touches[0];
+      } else if (e.originalEvent.changedTouches && e.originalEvent.changedTouches.length) {
+        e = e.originalEvent.changedTouches[0];
+      }
+
+      var position = e.clientX - this.domNode.offset().left;
+      this.domNode.trigger('change', [this, pointer, position]);
+    },
+    onDragEnd: function onDragEnd(e) {
+      this.pointers.removeClass('focused').trigger('rangeslideend');
+      this.labels.removeClass('focused');
+      $(document).off('.slider');
+      this.options.ondragend.call(this, this.options.value);
+    },
+    barClicked: function barClicked(e) {
+      if (this.options.disable) return;
+      var x = e.pageX - this.clickableBar.offset().left;
+      if (this.isSingle()) this.setPosition(this.pointers.last(), x, true, true);else {
+        var firstLeft = Math.abs(parseFloat(this.pointers.first().css('left'), 10)),
+            firstHalfWidth = this.pointers.first().width() / 2,
+            lastLeft = Math.abs(parseFloat(this.pointers.last().css('left'), 10)),
+            lastHalfWidth = this.pointers.first().width() / 2,
+            leftSide = Math.abs(firstLeft - x + firstHalfWidth),
+            rightSide = Math.abs(lastLeft - x + lastHalfWidth),
+            pointer;
+
+        if (leftSide == rightSide) {
+          pointer = x < firstLeft ? this.pointers.first() : this.pointers.last();
+        } else {
+          pointer = leftSide < rightSide ? this.pointers.first() : this.pointers.last();
+        }
+
+        this.setPosition(pointer, x, true, true);
+      }
+      this.options.onbarclicked.call(this, this.options.value);
+    },
+    onChange: function onChange(e, self, pointer, position) {
+      var min, max;
+      min = 0;
+      max = self.domNode.width();
+
+      if (!self.isSingle()) {
+        min = pointer.hasClass('high') ? parseFloat(self.lowPointer.css("left")) + self.lowPointer.width() / 2 : 0;
+        max = pointer.hasClass('low') ? parseFloat(self.highPointer.css("left")) + self.highPointer.width() / 2 : self.domNode.width();
+      }
+
+      var value = Math.min(Math.max(position, min), max);
+      self.setPosition(pointer, value, true);
+    },
+    setPosition: function setPosition(pointer, position, isPx, animate) {
+      var leftPos,
+          rightPos,
+          lowPos = parseFloat(this.lowPointer.css("left")),
+          highPos = parseFloat(this.highPointer.css("left")) || 0,
+          circleWidth = this.highPointer.width() / 2;
+
+      if (!isPx) {
+        position = this.prcToPx(position);
+      }
+
+      if (this.options.snap) {
+        var expPos = this.correctPositionForSnap(position);
+
+        if (expPos === -1) {
+          return;
+        } else {
+          position = expPos;
+        }
+      }
+
+      if (pointer[0] === this.highPointer[0]) {
+        highPos = Math.round(position - circleWidth);
+      } else {
+        lowPos = Math.round(position - circleWidth);
+      }
+
+      pointer[animate ? 'animate' : 'css']({
+        'left': Math.round(position - circleWidth)
+      });
+
+      if (this.isSingle()) {
+        leftPos = 0;
+      } else {
+        leftPos = lowPos + circleWidth;
+        rightPos = highPos + circleWidth;
+      }
+
+      var w = Math.round(highPos + circleWidth - leftPos);
+      this.bar[animate ? 'animate' : 'css']({
+        'width': Math.abs(w),
+        'left': w > 0 ? leftPos : leftPos + w
+      });
+      this.showPointerValue(pointer, position, animate);
+      this.isReadonly();
+    },
+    correctPositionForSnap: function correctPositionForSnap(position) {
+      var currentValue = this.positionToValue(position) - this.options.from;
+      var diff = this.options.width / (this.interval / this.options.step),
+          expectedPosition = currentValue / this.options.step * diff;
+
+      if (position <= expectedPosition + diff / 2 && position >= expectedPosition - diff / 2) {
+        return expectedPosition;
+      } else {
+        return -1;
+      }
+    },
+    // will be called from outside
+    setValue: function setValue(value) {
+      var values = value.toString().split(',');
+      values[0] = Math.min(Math.max(values[0], this.options.from), this.options.to) + '';
+
+      if (values.length > 1) {
+        values[1] = Math.min(Math.max(values[1], this.options.from), this.options.to) + '';
+      }
+
+      this.options.value = value;
+      var prc = this.valuesToPrc(values.length === 2 ? values : [0, values[0]]);
+
+      if (this.isSingle()) {
+        this.setPosition(this.highPointer, prc[1]);
+      } else {
+        this.setPosition(this.lowPointer, prc[0]);
+        this.setPosition(this.highPointer, prc[1]);
+      }
+    },
+    renderScale: function renderScale() {
+      var s = this.options.scale || [this.options.from, this.options.to];
+      var prc = Math.round(100 / (s.length - 1) * 10) / 10;
+      var str = '';
+
+      for (var i = 0; i < s.length; i++) {
+        str += '<span style="left: ' + i * prc + '%">' + (s[i] != '|' ? '<ins>' + s[i] + '</ins>' : '') + '</span>';
+      }
+
+      this.scale.html(str);
+      $('ins', this.scale).each(function () {
+        $(this).css({
+          marginLeft: -$(this).outerWidth() / 2
+        });
+      });
+    },
+    getBarWidth: function getBarWidth() {
+      var values = this.options.value.split(',');
+
+      if (values.length > 1) {
+        return parseFloat(values[1]) - parseFloat(values[0]);
+      } else {
+        return parseFloat(values[0]);
+      }
+    },
+    showPointerValue: function showPointerValue(pointer, position, animate) {
+      var label = $('.pointer-label', this.domNode)[pointer.hasClass('low') ? 'first' : 'last']();
+      var text;
+      var value = this.positionToValue(position); // Is it higer or lower than it should be?
+
+      if ($.isFunction(this.options.format)) {
+        var type = this.isSingle() ? undefined : pointer.hasClass('low') ? 'low' : 'high';
+        text = this.options.format(value, type);
+      } else {
+        text = this.options.format.replace('%s', value);
+      }
+
+      var width = label.html(text).width(),
+          left = position - width / 2;
+      left = Math.min(Math.max(left, 0), this.options.width - width);
+      label[animate ? 'animate' : 'css']({
+        left: left
+      });
+      this.setInputValue(pointer, value);
+    },
+    valuesToPrc: function valuesToPrc(values) {
+      var lowPrc = (parseFloat(values[0]) - parseFloat(this.options.from)) * 100 / this.interval,
+          highPrc = (parseFloat(values[1]) - parseFloat(this.options.from)) * 100 / this.interval;
+      return [lowPrc, highPrc];
+    },
+    prcToPx: function prcToPx(prc) {
+      return this.domNode.width() * prc / 100;
+    },
+    isDecimal: function isDecimal() {
+      return (this.options.value + this.options.from + this.options.to).indexOf(".") === -1 ? false : true;
+    },
+    positionToValue: function positionToValue(pos) {
+      var value = pos / this.domNode.width() * this.interval;
+      value = parseFloat(value, 10) + parseFloat(this.options.from, 10);
+
+      if (this.isDecimal()) {
+        var final = Math.round(Math.round(value / this.options.step) * this.options.step * 100) / 100;
+
+        if (final !== 0.0) {
+          final = '' + final;
+
+          if (final.indexOf(".") === -1) {
+            final = final + ".";
+          }
+
+          while (final.length - final.indexOf('.') < 3) {
+            final = final + "0";
+          }
+        } else {
+          final = "0.00";
+        }
+
+        return final;
+      } else {
+        return Math.round(value / this.options.step) * this.options.step;
+      }
+    },
+    setInputValue: function setInputValue(pointer, v) {
+      // if(!isChanged) return;
+      if (this.isSingle()) {
+        this.options.value = v.toString();
+      } else {
+        var values = this.options.value.split(',');
+
+        if (pointer.hasClass('low')) {
+          this.options.value = v + ',' + values[1];
+        } else {
+          this.options.value = values[0] + ',' + v;
+        }
+      }
+
+      if (this.inputNode.val() !== this.options.value) {
+        this.inputNode.val(this.options.value).trigger('change');
+        this.options.onstatechange.call(this, this.options.value);
+      }
+    },
+    getValue: function getValue() {
+      return this.options.value;
+    },
+    getOptions: function getOptions() {
+      return this.options;
+    },
+    getRange: function getRange() {
+      return this.options.from + "," + this.options.to;
+    },
+    isReadonly: function isReadonly() {
+      this.domNode.toggleClass('slider-readonly', this.options.disable);
+    },
+    disable: function disable() {
+      this.options.disable = true;
+      this.isReadonly();
+    },
+    enable: function enable() {
+      this.options.disable = false;
+      this.isReadonly();
+    },
+    toggleDisable: function toggleDisable() {
+      this.options.disable = !this.options.disable;
+      this.isReadonly();
+    },
+    updateRange: function updateRange(range, value) {
+      var values = range.toString().split(',');
+      this.interval = parseInt(values[1]) - parseInt(values[0]);
+
+      if (value) {
+        this.setValue(value);
+      } else {
+        this.setValue(this.getValue());
+      }
+    }
+  };
+  var pluginName = 'jRange'; // A really lightweight plugin wrapper around the constructor,
+  // preventing against multiple instantiations
+
+  $.fn[pluginName] = function (option) {
+    var args = arguments,
+        result;
+    this.each(function () {
+      var $this = $(this),
+          data = $.data(this, 'plugin_' + pluginName),
+          options = _typeof(option) === 'object' && option;
+
+      if (!data) {
+        $this.data('plugin_' + pluginName, data = new jRange(this, options));
+        $(window).resize(function () {
+          data.setValue(data.getValue());
+        }); // Update slider position when window is resized to keep it in sync with scale
+      } // if first argument is a string, call silimarly named function
+      // this gives flexibility to call functions of the plugin e.g.
+      //   - $('.dial').plugin('destroy');
+      //   - $('.dial').plugin('render', $('.new-child'));
+
+
+      if (typeof option === 'string') {
+        result = data[option].apply(data, Array.prototype.slice.call(args, 1));
+      }
+    }); // To enable plugin returns values
+
+    $('.search-page-range-slider__prices-output_low').html(5000);
+    $('.search-page-range-slider__prices-output_high').html(10000);
+    return result || this;
+  };
+})(jQuery, window, document);
+},{}],"src/js/search.js":[function(require,module,exports) {
 "use strict";
 
 var _main = _interopRequireDefault(require("./main"));
 
+require("../blocks/checkbox-list/checkbox-list");
+
 require("../blocks/datepicker/datepicker");
+
+require("../blocks/guest-setter/guest-setter");
+
+require("../blocks/range-slider/range-slider");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _main.default)();
 $(document).ready(function () {
-  $('.registration-field__datepicker').datepicker({
+  $('.search-page-datepicker-plugin').datepicker({
+    range: true,
+    multipleDatesSeparator: " - ",
     position: "bottom center",
     clearButton: true
   });
+  $('.range-slider').jRange({
+    from: 1,
+    to: 30000,
+    step: 500,
+    isRange: true
+  });
 });
-},{"./main":"src/js/main.js","../blocks/datepicker/datepicker":"src/blocks/datepicker/datepicker.js"}],"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./main":"src/js/main.js","../blocks/checkbox-list/checkbox-list":"src/blocks/checkbox-list/checkbox-list.js","../blocks/datepicker/datepicker":"src/blocks/datepicker/datepicker.js","../blocks/guest-setter/guest-setter":"src/blocks/guest-setter/guest-setter.js","../blocks/range-slider/range-slider":"src/blocks/range-slider/range-slider.js"}],"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2426,7 +2908,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50939" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54699" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -2601,5 +3083,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/js/registration.js"], null)
-//# sourceMappingURL=/registration.d976483e.js.map
+},{}]},{},["C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/js/search.js"], null)
+//# sourceMappingURL=/search.27395141.js.map

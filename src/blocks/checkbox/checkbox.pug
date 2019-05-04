@@ -1,0 +1,9 @@
+mixin checkbox(labelText)
+  label.checkbox__container= labelText
+    input(type="checkbox")
+    span.checkbox__checkmark
+
+mixin checkboxChecked(labelText)
+  label.checkbox__container= labelText
+    input(type="checkbox" checked)
+    span.checkbox__checkmark

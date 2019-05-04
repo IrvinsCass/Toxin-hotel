@@ -1,0 +1,17 @@
+.checkbox-list {
+
+  &-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &-content {
+    list-style: none;
+    margin-top: 17.5px;
+
+    &__item {
+      margin-bottom: 11px;
+    }
+  }
+}

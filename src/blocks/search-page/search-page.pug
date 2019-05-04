@@ -1,0 +1,56 @@
+main.search-page
+  aside.search-page-settings
+    include ../guest-setter/guest-setter
+    include ../range-slider/range-slider
+    include ../checkbox/checkbox
+    .search-page-datepicker
+      h3.search-page-datepicker__header Даты пребывания в отеле
+      input(type="text" placeholder="ДД.ММ.ГГГГ").search-page-datepicker-plugin.text-field
+    .search-page-dropdown
+      +dropdown
+    .search-page-range-slider
+      .search-page-range-slider__header 
+        h3 диапазон цены
+        .search-page-range-slider__prices-output
+          .search-page-range-slider__prices-output_low 
+          span &#8381;
+          pre  - 
+          .search-page-range-slider__prices-output_high 
+          span &#8381;
+      +rangeSlider
+      p.search-page-range-slider__footer Стоимость за сутки пребывания в номере
+    .search-page-checkboxes
+      h3.search-page-checkboxes__header checkbox buttons
+      .search-page-checkboxes__item
+        +checkbox('Можно курить')
+      .search-page-checkboxes__item
+        +checkboxChecked('Можно с питомцами')
+      .search-page-checkboxes__item
+        +checkboxChecked('Можно пригласить гостей (до 10 человек)')
+  main.search-page-content
+    include ../room/room
+    h1.search-page-content__header Номера, которые мы для вас подобрали
+    .search-page-content__item
+      +room("./img/rooms/room1.png", 888, 9990, 145, 'люкс')
+    .search-page-content__item
+      +room("./img/rooms/room2.png", 840, 9900, 65)
+    .search-page-content__item
+      +room("./img/rooms/room3.png", 980, 8500, 35, 'люкс')
+    .search-page-content__item
+      +room("./img/rooms/room4.png", 856, 7300, 19)
+    .search-page-content__item
+      +room("./img/rooms/room5.png", 740, 6000, 44)
+    .search-page-content__item
+      +room("./img/rooms/room6.png", 982, 5800, 56)
+    .search-page-content__item
+      +room("./img/rooms/room7.png", 678, 5500, 45)
+    .search-page-content__item
+      +room("./img/rooms/room8.png", 450, 5300, 39)
+    .search-page-content__item
+      +room("./img/rooms/room9.png", 350, 5000, 77)
+    .search-page-content__item
+      +room("./img/rooms/room10.png", 666, 5000, 25)
+    .search-page-content__item
+      +room("./img/rooms/room11.png", 444, 5000, 15)
+    .search-page-content__item
+      +room("./img/rooms/room12.png", 352, 5000, 55)

@@ -1,16 +1,25 @@
+//Utilits
 @import './fonts';
 @import './vars';
+
+//Blocks
 @import '../../blocks/header/header';
 @import '../../blocks/footer/footer';
 @import '../../blocks/button/button';
-@import '../../blocks/index-page/index-page';
 @import '../../blocks/room-finder/room-finder';
-@import '../../blocks/datepicker/datepicker';
 @import '../../blocks/text-field/text-field';
-@import '../../blocks/guest-setter/guest-setter.scss';
-@import '../../blocks/login-registration-page/login-registration-page';
+@import '../../blocks/guest-setter/guest-setter';
 @import '../../blocks/registration-form/registration-form';
 @import '../../blocks/login-form/login-form';
 @import '../../blocks/radiobutton/radiobutton';
 @import '../../blocks/checkbox/checkbox';
 @import '../../blocks/toggle-switcher/toggle-switcher';
+@import '../../blocks/checkbox-list/checkbox-list';
+@import '../../blocks/rate-button/rate-button.scss';
+@import '../../blocks/room/room.scss';
+@import '../../blocks/range-slider/range-slider.scss';
+
+//Pages
+@import '../../blocks/index-page/index-page';
+@import '../../blocks/login-registration-page/login-registration-page';
+@import '../../blocks/search-page/search-page';
