@@ -1,3 +1,13 @@
 mixin rangeSlider
-  .range-slider-wrapper
-    input(type="hidden" value="25,75").range-slider
+  .range-slider
+    .range-slider__header 
+      h3 диапазон цены
+      .range-slider__prices-output
+        .range-slider__prices-output_low 
+        span &#8381;
+        pre  - 
+        .range-slider__prices-output_high 
+        span &#8381;
+    .range-slider-wrapper
+      input(type="hidden" value="25,75").range-slider-bar
+    p.range-slider__footer Стоимость за сутки пребывания в номере

@@ -395,8 +395,8 @@
 		});
 
 		// To enable plugin returns values
-		$('.search-page-range-slider__prices-output_low').html(5000);
-		$('.search-page-range-slider__prices-output_high').html(10000);
+		$('.range-slider__prices-output_low').html(5000);
+		$('.range-slider__prices-output_high').html(10000);
 		return result || this;
 	};
 

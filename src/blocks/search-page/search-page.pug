@@ -1,24 +1,15 @@
 main.search-page
   aside.search-page-settings
-    include ../guest-setter/guest-setter
+    include ../dropdown/dropdown
     include ../range-slider/range-slider
     include ../checkbox/checkbox
     .search-page-datepicker
       h3.search-page-datepicker__header Даты пребывания в отеле
       input(type="text" placeholder="ДД.ММ.ГГГГ").search-page-datepicker-plugin.text-field
-    .search-page-dropdown
-      +dropdown
+    .search-page-guest-dropdown
+      +dropdown('Гости', 'Взрослые', 'Дети', 'Младенцы', 'Сколько гостей')
     .search-page-range-slider
-      .search-page-range-slider__header 
-        h3 диапазон цены
-        .search-page-range-slider__prices-output
-          .search-page-range-slider__prices-output_low 
-          span &#8381;
-          pre  - 
-          .search-page-range-slider__prices-output_high 
-          span &#8381;
       +rangeSlider
-      p.search-page-range-slider__footer Стоимость за сутки пребывания в номере
     .search-page-checkboxes
       h3.search-page-checkboxes__header checkbox buttons
       .search-page-checkboxes__item
@@ -27,6 +18,10 @@ main.search-page
         +checkboxChecked('Можно с питомцами')
       .search-page-checkboxes__item
         +checkboxChecked('Можно пригласить гостей (до 10 человек)')
+    .search-page-room-details-dropdown
+      +dropdown('удобства номера', 'Спальни', 'Кровати', 'Ванные комнаты', '2 спальни, 2 кровати')
+    .search-page-checkbox-list
+      include ../checkbox-list/checkbox-list
   main.search-page-content
     include ../room/room
     h1.search-page-content__header Номера, которые мы для вас подобрали

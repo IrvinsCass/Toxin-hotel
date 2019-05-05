@@ -2404,20 +2404,20 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
   })();
 })(window, jQuery);
-},{}],"src/blocks/guest-setter/guest-setter.js":[function(require,module,exports) {
+},{}],"src/blocks/dropdown/dropdown.js":[function(require,module,exports) {
 $(document).ready(function () {
-  $('.guest-setter__option_confirm').on('click', function () {
-    $('.guest-setter').hide();
+  $('.dropdown-option__confirm').on('click', function () {
+    $('.dropdown').hide();
   });
   $(document).on('click', function (e) {
-    if ($(e.target).closest(".guest-setter-wrapper").length === 0) {
-      $(".guest-setter").hide();
+    if ($(e.target).closest(".dropdown-wrapper").length === 0) {
+      $(".dropdown").hide();
     }
   });
-  $('.guest-setter-input').on('focus', function () {
-    $(this).siblings('.guest-setter').show();
+  $('.dropdown-input').on('focus', function () {
+    $(this).siblings('.dropdown').show();
   });
-  $('.guest-setter').hide();
+  $('.dropdown').hide();
 });
 },{}],"src/blocks/range-slider/range-slider.js":[function(require,module,exports) {
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -2845,8 +2845,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }); // To enable plugin returns values
 
-    $('.search-page-range-slider__prices-output_low').html(5000);
-    $('.search-page-range-slider__prices-output_high').html(10000);
+    $('.range-slider__prices-output_low').html(5000);
+    $('.range-slider__prices-output_high').html(10000);
     return result || this;
   };
 })(jQuery, window, document);
@@ -2859,7 +2859,7 @@ require("../blocks/checkbox-list/checkbox-list");
 
 require("../blocks/datepicker/datepicker");
 
-require("../blocks/guest-setter/guest-setter");
+require("../blocks/dropdown/dropdown");
 
 require("../blocks/range-slider/range-slider");
 
@@ -2873,14 +2873,14 @@ $(document).ready(function () {
     position: "bottom center",
     clearButton: true
   });
-  $('.range-slider').jRange({
+  $('.range-slider-bar').jRange({
     from: 1,
     to: 30000,
     step: 500,
     isRange: true
   });
 });
-},{"./main":"src/js/main.js","../blocks/checkbox-list/checkbox-list":"src/blocks/checkbox-list/checkbox-list.js","../blocks/datepicker/datepicker":"src/blocks/datepicker/datepicker.js","../blocks/guest-setter/guest-setter":"src/blocks/guest-setter/guest-setter.js","../blocks/range-slider/range-slider":"src/blocks/range-slider/range-slider.js"}],"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./main":"src/js/main.js","../blocks/checkbox-list/checkbox-list":"src/blocks/checkbox-list/checkbox-list.js","../blocks/datepicker/datepicker":"src/blocks/datepicker/datepicker.js","../blocks/dropdown/dropdown":"src/blocks/dropdown/dropdown.js","../blocks/range-slider/range-slider":"src/blocks/range-slider/range-slider.js"}],"C:/Users/Irvins/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2908,7 +2908,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54699" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49518" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,6 +1,6 @@
 import main from './main';
 import '../blocks/datepicker/datepicker';
-import '../blocks/guest-setter/guest-setter';
+import '../blocks/dropdown/dropdown';
 
 main();
 

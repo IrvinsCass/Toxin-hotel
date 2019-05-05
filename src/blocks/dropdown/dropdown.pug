@@ -1,0 +1,26 @@
+mixin dropdown(header, firstOption, secondOption, thirdOption, placeholder)
+  .dropdown-wrapper
+    h3.dropdown__input-header= header
+    input(type="text" placeholder= placeholder).text-field.dropdown-input
+    .dropdown
+      .dropdown-option
+        .dropdown-option__first= firstOption
+        .dropdown-controller
+          button.dropdown-controller__button -
+          .guest-counter.fisrt-counter 0
+          button.dropdown-controller__button +
+      .dropdown-option
+        .dropdown-option__second= secondOption
+        .dropdown-controller
+          button.dropdown-controller__button -
+          .guest-counter.second-counter 0
+          button.dropdown-controller__button +
+      .dropdown-option
+        .dropdown-option__third= thirdOption
+        .dropdown-controller
+          button.dropdown-controller__button -
+          .guest-counter.third-counter 0
+          button.dropdown-controller__button +
+      .dropdown-option
+        .dropdown-option__clear Очистить
+        .dropdown-option__confirm Применить

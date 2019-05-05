@@ -24,26 +24,6 @@
 
   &-range-slider {
     margin-top: 20px;
-
-    &__header {
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    &__prices-output {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    &__footer {
-      margin-top: 11px;
-      font-size: 12px;
-      color: $dark50;
-    }
   }
 
   &-checkboxes {
@@ -56,6 +36,10 @@
     &__item {
       margin-bottom: 10px;
     }
+  }
+
+  &-checkbox-list {
+    margin-top: 20px;
   }
 
   &-content {

@@ -1,7 +1,7 @@
 import main from './main';
 import '../blocks/checkbox-list/checkbox-list';
 import '../blocks/datepicker/datepicker';
-import '../blocks/guest-setter/guest-setter';
+import '../blocks/dropdown/dropdown';
 import '../blocks/range-slider/range-slider';
 
 main();
@@ -14,7 +14,7 @@ $(document).ready(function() {
     clearButton: true
   })
 
-  $('.range-slider').jRange({
+  $('.range-slider-bar').jRange({
     from: 1,
     to: 30000,
     step: 500,
