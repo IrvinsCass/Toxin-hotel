@@ -1,11 +1,15 @@
 .search-page {
   width: 100%;
-  background-color: $dark5;
+  background-color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   padding: 0 140px;
+
+  &-aside-block {
+    margin-bottom: 30px;
+  }
 
   &-settings {
     width: 28%;
@@ -13,7 +17,6 @@
   }
 
   &-datepicker {
-    margin-bottom: 20px;
 
     &__header {
       display: block;
@@ -22,12 +25,7 @@
     }
   }
 
-  &-range-slider {
-    margin-top: 20px;
-  }
-
   &-checkboxes {
-    margin-top: 30px;
 
     &__header {
       margin-bottom: 11px;
@@ -38,8 +36,15 @@
     }
   }
 
-  &-checkbox-list {
-    margin-top: 20px;
+  &-checkbox-rich {
+
+    &__header {
+      margin-bottom: 15px;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
   &-content {
@@ -55,8 +60,15 @@
       width: 100%;
       margin-bottom: 20.5px;
     }
+
     &__item {
       margin-bottom: 20px;
+    }
+
+    &__pagination {
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 69px;
     }
   }
 }

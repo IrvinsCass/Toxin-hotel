@@ -3,14 +3,15 @@ main.search-page
     include ../dropdown/dropdown
     include ../range-slider/range-slider
     include ../checkbox/checkbox
-    .search-page-datepicker
+    include ../checkbox-rich/checkbox-rich
+    .search-page-datepicker.search-page-aside-block
       h3.search-page-datepicker__header Даты пребывания в отеле
       input(type="text" placeholder="ДД.ММ.ГГГГ").search-page-datepicker-plugin.text-field
-    .search-page-guest-dropdown
+    .search-page-guest-dropdown.search-page-aside-block
       +dropdown('Гости', 'Взрослые', 'Дети', 'Младенцы', 'Сколько гостей')
-    .search-page-range-slider
+    .search-page-range-slider.search-page-aside-block
       +rangeSlider
-    .search-page-checkboxes
+    .search-page-checkboxes.search-page-aside-block
       h3.search-page-checkboxes__header checkbox buttons
       .search-page-checkboxes__item
         +checkbox('Можно курить')
@@ -18,9 +19,15 @@ main.search-page
         +checkboxChecked('Можно с питомцами')
       .search-page-checkboxes__item
         +checkboxChecked('Можно пригласить гостей (до 10 человек)')
-    .search-page-room-details-dropdown
+    .search-page-checkbox-rich.search-page-aside-block
+      h3.search-page-checkbox-rich__header доступность
+      .search-page-checkbox-rich__item
+        +checkboxRich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
+      .search-page-checkbox-rich__item
+        +checkboxRich('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.')
+    .search-page-room-details-dropdown.search-page-aside-block
       +dropdown('удобства номера', 'Спальни', 'Кровати', 'Ванные комнаты', '2 спальни, 2 кровати')
-    .search-page-checkbox-list
+    .search-page-checkbox-list.search-page-aside-block
       include ../checkbox-list/checkbox-list
   main.search-page-content
     include ../room/room
@@ -49,3 +56,5 @@ main.search-page
       +room("./img/rooms/room11.png", 444, 5000, 15)
     .search-page-content__item
       +room("./img/rooms/room12.png", 352, 5000, 55)
+    .search-page-content__pagination
+      include ../pagination/pagination
