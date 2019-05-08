@@ -1,7 +1,91 @@
 .booking-page {
+
   &-header {
-    display: block;
+    position: relative;
+    height: 489px;
+
+    &__img_big {
+      position: absolute;
+    }
+
+    &__img_small_top {
+      position: absolute;
+      right: 0;
+      top: 0
+    }
+
+    &__img_small_bottom {
+      position: absolute;
+      right: 0;
+      top: 243px;
+    }
+  }
+
+  &-content {
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    width: 100%;
+    padding: 70px 140px;
+
+    &__header {
+      margin-bottom: 20px;
+    }
+
+    &__block {
+      margin-bottom: 30px;
+      margin-right: 70px;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 911px;
+    }
+
+    &-right {
+      max-width: 511px;
+      padding-left: 70px;
+    }
+
+    &-room-info {
+      width: 100%;
+      max-width: 291px;
+      display: flex;
+      flex-direction: column;
+
+      &__item {
+        max-width: 280px;
+        margin-bottom: 20px;
+        padding-bottom: 17px;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    &-room-impressions {
+      width: 100%;
+      max-width: 311px;
+      margin-right: 0;
+    }
+
+    &-comments {
+      width: 100%;
+      max-width: 711px;
+
+      &__item {
+        margin-top: 20px;
+      }
+    }
+
+    &-booking-form {
+      margin-right: 0;
+    }
   }
 }

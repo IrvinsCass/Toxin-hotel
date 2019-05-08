@@ -1,0 +1,10 @@
+mixin comment(photo, name, time, content)
+  .comment
+    .comment-header
+      img(src= photo, alt="").comment-header__img
+      p.comment-header__text= name
+        br
+        span.comment-header__text_thin= time
+    .comment-content
+      .comment-content-like
+      p.comment-content__text= content

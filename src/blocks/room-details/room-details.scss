@@ -1,0 +1,26 @@
+.room-details {
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__icon {
+    font-size: 48px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__text {
+    margin-left: 10px;
+    font-size: 14px; 
+    line-height: 24px;
+    font-family: Montserrat-Bold;
+    color: $dark75;
+
+    &_thin {
+      font-family: Montserrat;
+    }
+  }
+}
