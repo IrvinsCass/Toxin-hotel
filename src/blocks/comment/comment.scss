@@ -35,8 +35,11 @@
     flex-direction: row;
 
     &-like {
-      width: 60px;
-      height: 40px;
+      display: flex;
+      justify-content: center;
+      width: 48px;
+      margin-right: 12px;
+      padding-top: 12px;
     }
 
     &__text {

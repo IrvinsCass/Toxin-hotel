@@ -1031,8 +1031,11 @@ input:checked + .toggle-switcher__slider:before {
   flex-direction: row;
 }
 .comment-content-like {
-  width: 60px;
-  height: 40px;
+  display: flex;
+  justify-content: center;
+  width: 48px;
+  margin-right: 12px;
+  padding-top: 12px;
 }
 .comment-content__text {
   font-size: 14px;
@@ -1041,6 +1044,49 @@ input:checked + .toggle-switcher__slider:before {
   display: block;
   max-width: 653px;
   color: rgba(31, 32, 65, 0.75);
+}
+
+.button-like {
+  width: 40px;
+  height: 20px;
+  background: transparent;
+  border: 2px solid rgba(31, 32, 65, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.button-like i {
+  display: block;
+  width: 20px;
+}
+.button-like i,
+.button-like span {
+  color: rgba(31, 32, 65, 0.25);
+  font-size: 10px;
+  line-height: 8px;
+}
+.button-like span {
+  line-height: 12px;
+}
+.button-like_liked {
+  border: 2px solid transparent;
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-origin: border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
+}
+.button-like_liked i,
+.button-like_liked span {
+  color: #BC9CFF;
+}
+
+.booking-form {
+  width: 380px;
+  height: 511px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .index-main {

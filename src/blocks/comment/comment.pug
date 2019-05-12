@@ -1,4 +1,5 @@
-mixin comment(photo, name, time, content)
+mixin comment(photo, name, time, content, likes)
+  include ../like-button/like-button
   .comment
     .comment-header
       img(src= photo, alt="").comment-header__img
@@ -7,4 +8,5 @@ mixin comment(photo, name, time, content)
         span.comment-header__text_thin= time
     .comment-content
       .comment-content-like
+        +like-button_liked(like= likes)
       p.comment-content__text= content
