@@ -20,8 +20,10 @@ main.booking-page
           +room-details('whatshot', 'Уют', 'Номер оснащён камином')
       .booking-page-content-room-impressions.booking-page-content__block
         h2.booking-page-content-room-impressions__header.booking-page-content__header Впечатления от номера
+        include ../pie-chart/pie-chart
       .booking-page-content-comments.booking-page-content__block
         h2.booking-page-content-comments__header.booking-page-content__header Отзывы посетителей номера
+        .booking-page-content-comments__comments-counter 2 отзыва
         .booking-page-content-comments__item
           +comment('./img/comments/image1.png', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', '5')
         .booking-page-content-comments__item

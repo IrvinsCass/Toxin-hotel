@@ -78,6 +78,14 @@
     &-comments {
       width: 100%;
       max-width: 711px;
+      position: relative;
+
+      &__comments-counter {
+        position: absolute;
+        line-height: 14px;
+        right: 0;
+        top: 5px;
+      }
 
       &__item {
         margin-top: 20px;

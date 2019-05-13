@@ -346,86 +346,6 @@ header {
   outline: none;
 }
 
-.registration-field {
-  width: 100%;
-  padding: 30px 30px 30px 30px;
-  max-width: 380px;
-  height: 646px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.registration-field__h1-header {
-  margin-bottom: 15px;
-}
-.registration-field__h3-header {
-  margin-top: 20px;
-}
-.registration-field__text-field {
-  margin: 5px 0;
-}
-.registration-field-radio-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 5px 0 0 0;
-}
-.registration-field-radiobutton {
-  margin-right: 20px;
-}
-.registration-field-toggle-container {
-  margin: 5px 0 20px 0;
-}
-.registration-field-enter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-}
-.registration-field-enter__text {
-  color: #000;
-}
-.registration-field-enter__button {
-  width: 99px;
-}
-
-.login-field {
-  width: 100%;
-  padding: 30px 30px 30px 30px;
-  max-width: 380px;
-  height: 358px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.login-field__h1-header {
-  margin-bottom: 15px;
-}
-.login-field__text-field {
-  margin: 5px 0;
-}
-.login-field__login-button {
-  margin-top: 20px;
-}
-.login-field-register {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-}
-.login-field-register__text {
-  color: #000;
-}
-.login-field-register__button {
-  width: 99px;
-}
-
 /* The container */
 .radiobutton__container {
   display: flex;
@@ -1079,14 +999,191 @@ input:checked + .toggle-switcher__slider:before {
   color: #BC9CFF;
 }
 
-.booking-form {
+.pie-chart {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.pie-chart__votes {
+  display: block;
+  width: 66px;
+  left: 27px;
+  position: absolute;
+  top: 45px;
+  text-align: center;
+  font-family: Quicksand;
+  font-weight: bold;
+  color: #BC9CFF;
+  font-size: 24px;
+  line-height: 0.7;
+}
+.pie-chart__votes span {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: Montserrat-Bold;
+}
+.pie-chart-legend {
+  list-style: none;
+  position: absolute;
+  left: 150px;
+  bottom: 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+.pie-chart-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.pie-chart-legend-dot_orange {
+  background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+}
+.pie-chart-legend-dot_green {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.pie-chart-legend-dot_purple {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.pie-chart-legend-dot_black {
+  background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}
+.pie-chart-legend__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form {
   width: 380px;
-  height: 511px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px 30px 30px;
+}
+.form-h1 {
+  margin-bottom: 15px;
+}
+.form-h3 {
+  margin: 5px 0;
+}
+.form-section {
+  margin-bottom: 15px;
+}
+.form-text-field {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.registration-field {
+  width: 100%;
+  padding: 30px 30px 30px 30px;
+  max-width: 380px;
+  height: 646px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.registration-field__h1-header {
+  margin-bottom: 15px;
+}
+.registration-field__h3-header {
+  margin-top: 20px;
+}
+.registration-field__text-field {
+  margin: 5px 0;
+}
+.registration-field-radio-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0 0 0;
+}
+.registration-field-radiobutton {
+  margin-right: 20px;
+}
+.registration-field-toggle-container {
+  margin: 5px 0 20px 0;
+}
+.registration-field-enter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.registration-field-enter__text {
+  color: #000;
+}
+.registration-field-enter__button {
+  width: 99px;
+}
+
+.login-field {
+  width: 100%;
+  padding: 30px 30px 30px 30px;
+  max-width: 380px;
+  height: 358px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.login-field__h1-header {
+  margin-bottom: 15px;
+}
+.login-field__text-field {
+  margin: 5px 0;
+}
+.login-field__login-button {
+  margin-top: 20px;
+}
+.login-field-register {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.login-field-register__text {
+  color: #000;
+}
+.login-field-register__button {
+  width: 99px;
+}
+
+.booking-form-room {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.booking-form-room__number {
+  font-family: Montserrat-Bold;
+}
+.booking-form-room__number_number {
+  font-size: 24px;
+  margin-right: 5px;
+}
+.booking-form-room__number_lux {
+  text-transform: uppercase;
+  color: #BC9CFF;
+  font-size: 12px;
+}
+.booking-form-room__price {
+  font-family: Montserrat-Bold;
+  color: rgba(31, 32, 65, 0.5);
+}
+.booking-form-room__price span {
+  font-family: Montserrat;
 }
 
 .index-main {
@@ -1175,6 +1272,13 @@ input:checked + .toggle-switcher__slider:before {
 .booking-page-content-comments {
   width: 100%;
   max-width: 711px;
+  position: relative;
+}
+.booking-page-content-comments__comments-counter {
+  position: absolute;
+  line-height: 14px;
+  right: 0;
+  top: 5px;
 }
 .booking-page-content-comments__item {
   margin-top: 20px;

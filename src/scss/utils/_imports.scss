@@ -9,8 +9,6 @@
 @import '../../blocks/room-finder/room-finder';
 @import '../../blocks/text-field/text-field';
 @import '../../blocks/dropdown/dropdown.scss';
-@import '../../blocks/registration-form/registration-form';
-@import '../../blocks/login-form/login-form';
 @import '../../blocks/radiobutton/radiobutton';
 @import '../../blocks/checkbox/checkbox';
 @import '../../blocks/checkbox-rich/checkbox-rich';
@@ -23,7 +21,14 @@
 @import '../../blocks/room-details/room-details';
 @import '../../blocks/comment/comment';
 @import '../../blocks/like-button/like-button';
+@import '../../blocks/pie-chart/pie-chart';
+
+//Forms
+@import '../../blocks/form/form';
+@import '../../blocks/registration-form/registration-form';
+@import '../../blocks/login-form/login-form';
 @import '../../blocks/booking-form/booking-form';
+
 
 //Pages
 @import '../../blocks/index-page/index-page';
