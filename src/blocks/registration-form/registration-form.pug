@@ -1,7 +1,9 @@
-.registration-field
-  h1.registration-field__h1-header Регистрация аккаунта
-  input(type="text", name="" placeholder="Имя").text-field.registration-field__text-field
-  input(type="text", name="" placeholder="Фамилия").text-field.registration-field__text-field
+.form
+  h1.form-h1 Регистрация аккаунта
+  .form-text-field
+    input(type="text", name="" placeholder="Имя").text-field
+  .form-text-field
+    input(type="text", name="" placeholder="Фамилия").text-field
   .registration-field-radio-container
     label.radiobutton__container.registration-field-radiobutton Мужчина
       input(type="radio" name="Radio" checked)

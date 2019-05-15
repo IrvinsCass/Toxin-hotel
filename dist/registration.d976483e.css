@@ -113,7 +113,6 @@ header {
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
-  border-top: 1px solid rgba(31, 32, 65, 0.25);
 }
 
 .footer-description {
@@ -249,23 +248,6 @@ header {
   position: absolute;
   right: 0;
   top: 0;
-}
-
-.room-finder {
-  width: 380px;
-  height: 374px;
-  padding: 30px;
-  background: #FFF;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.room-finder__header {
-  margin: 10px 0;
-}
-
-.room-finder__button {
-  margin-top: 20px;
 }
 
 .text-field {
@@ -1107,87 +1089,22 @@ input:checked + .toggle-switcher__slider:before {
 }
 .form-text-field {
   width: 100%;
-  margin: 5px 0;
+  margin: 10px 0;
+}
+.form-button {
+  margin-top: 30px;
 }
 
-.registration-field {
-  width: 100%;
-  padding: 30px 30px 30px 30px;
-  max-width: 380px;
-  height: 646px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.registration-field__h1-header {
-  margin-bottom: 15px;
-}
-.registration-field__h3-header {
-  margin-top: 20px;
-}
-.registration-field__text-field {
-  margin: 5px 0;
-}
-.registration-field-radio-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 5px 0 0 0;
-}
-.registration-field-radiobutton {
-  margin-right: 20px;
-}
-.registration-field-toggle-container {
-  margin: 5px 0 20px 0;
-}
-.registration-field-enter {
+.create-account {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
+  margin-bottom: 0;
 }
-.registration-field-enter__text {
-  color: #000;
-}
-.registration-field-enter__button {
-  width: 99px;
-}
-
-.login-field {
-  width: 100%;
-  padding: 30px 30px 30px 30px;
-  max-width: 380px;
-  height: 358px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.login-field__h1-header {
-  margin-bottom: 15px;
-}
-.login-field__text-field {
-  margin: 5px 0;
-}
-.login-field__login-button {
-  margin-top: 20px;
-}
-.login-field-register {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-}
-.login-field-register__text {
-  color: #000;
-}
-.login-field-register__button {
-  width: 99px;
+.create-account-button {
+  max-width: 99px;
 }
 
 .booking-form-room {
@@ -1448,6 +1365,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 24px;
+  line-height: 30px;
 }
 
 h2 {
@@ -1459,4 +1377,4 @@ h3 {
   text-transform: uppercase;
 }
 
-/*# sourceMappingURL=/booking.85ebbfb6.css.map */
+/*# sourceMappingURL=/registration.d976483e.css.map */

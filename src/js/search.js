@@ -7,7 +7,7 @@ import '../blocks/range-slider/range-slider';
 main();
 
 $(document).ready(function() {
-  $('.search-page-datepicker-plugin').datepicker({
+  $('.datepicker-plugin').datepicker({
     range: true,
     multipleDatesSeparator: " - ",
     position: "bottom center", 

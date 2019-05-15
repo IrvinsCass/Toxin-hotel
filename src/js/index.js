@@ -7,7 +7,7 @@ main();
 $(document).ready(function() {
   $('.datepicker-plugin').datepicker({
     range: true,
-    multipleDatesSeparator: "                       ",
+    multipleDatesSeparator: " - ",
     position: "bottom center", 
     clearButton: true
   })

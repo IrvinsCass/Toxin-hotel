@@ -1,9 +1,13 @@
-.login-field
-  h1.login-field__h1-header Войти
-  input(type="email" placeholder="Email").text-field.login-field__text-field
-  input(type="password" placeholder="Password").text-field.login-field__text-field
-  button.button.button_filled.button_filled_arrowed.login-field__login-button Войти
-    i.material-icons arrow_forward
-  .login-field-register
-    p.registration-field-enter__text Уже есть аккаунт на Toxin
-    button.button.button_transparent.registration-field-enter__button Войти
+.form
+  include ../button/button
+  h1.form-h1 Войти
+  .form-text-field
+    input(type="email" placeholder="Email").text-field
+  .form-text-field
+    input(type="password" placeholder="Password").text-field
+  .form-button
+    +button-filled('Войти', 'arrow_forward')
+  .create-account.form-section
+    p.registration-field-enter__text Нет аккаунта на Toxin?
+    .create-account-button
+      +button-transparent('Создать')

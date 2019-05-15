@@ -1,4 +1,5 @@
-.datepicker-plugin-wrapper 
-  h3.datepicker-plugin__header Прибытие
-  h3.datepicker-plugin__header Выезд
-  input(type="text" placeholder="ДД.ММ.ГГГГ").datepicker-plugin.text-field
+mixin datepicker(header)
+  h3.datepicker-plugin__header= header
+  .datepicker-plugin-content
+    input(type="text" placeholder="ДД.ММ.ГГГГ").datepicker-plugin.text-field
+    i.material-icons expand_more

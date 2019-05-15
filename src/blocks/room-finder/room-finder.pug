@@ -1,6 +1,12 @@
-.room-finder
-  h1.room-finder__header Найдём номера под ваши пожелания
-  include ../datepicker/datepicker
-  include ../guest-setter/guest-setter
-  button.button.room-finder__button.button_filled.button_filled_arrowed Подобрать номер
-    i.material-icons arrow_forward
+.room-finder.form
+  .form-section
+    h1.form-h1 Найдём номера под ваши пожелания
+  .form-section
+    include ../datepicker/datepicker
+    +datepicker('Даты пребывания в отеле')
+  .form-section
+    include ../dropdown/dropdown
+    +dropdown('Гости', 'Взрослые', 'Дети', 'Младенцы', 'Сколько гостей')
+  .form-button
+    include ../button/button
+    +button-filled('Подобрать номер', 'arrow_forward')

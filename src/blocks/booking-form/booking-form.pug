@@ -6,3 +6,34 @@
         span.booking-form-room__number_lux Люкс
       .booking-form-room__price 9 990&#8381; 
         span в сутки
+  .form-section
+    include ../datepicker/datepicker
+    +datepicker('Даты пребывания в отеле')
+  .form-section
+    include ../dropdown/dropdown
+    +dropdown('Гости', 'Взрослые', 'Дети', 'Младенцы', 'Гости')
+  .form-section
+    .booking-form-price
+      .booking-form-price-description
+        p.form-p 9900 x 4 суток
+      .booking-form-price-service
+        p.form-p 39 960&#8381;
+    .booking-form-price
+      .booking-form-price-description
+        p.form-p Сбор за услуги: скидка 2 179&#8381;
+        span.booking-form-price-description__info i
+      .booking-form-price-service
+        p.form-p 0&#8381;
+    .booking-form-price
+      .booking-form-price-description
+        p.form-p Сбор за дополнительные услуги
+        span.booking-form-price-description__info i
+      .booking-form-price-service
+        p.form-p 300&#8381;
+  .form-section.booking-form-price-total
+    h2 Итого
+    .booking-form-price-total__dotted-line
+    h2 38 081&#8381;
+  .form-section
+    include ../button/button
+    +button-filled('Забронировать', 'arrow_forward')

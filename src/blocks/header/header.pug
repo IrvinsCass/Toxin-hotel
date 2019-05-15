@@ -1,4 +1,5 @@
 header
+  include ../button/button
   nav.header-nav
     .header-nav__logo
       img(src="./img/header/logo.svg", alt="Toxin logo")
@@ -11,7 +12,7 @@ header
       li.navbar__item.navbar__item_dropdown Соглашения
         i.material-icons keyboard_arrow_down
       li.navbar__item
-        button.button.button_transparent.navbar__login-button войти
+        +button-transparent('Войти')
       li.navbar__item
-        button.button.button_filled.navbar__register-button зарегестрироваться
+        +button-filled('Зарегистрироваться', 'arrow-forward')
 

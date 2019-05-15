@@ -4,9 +4,9 @@ main.search-page
     include ../range-slider/range-slider
     include ../checkbox/checkbox
     include ../checkbox-rich/checkbox-rich
+    include ../datepicker/datepicker
     .search-page-datepicker.search-page-aside-block
-      h3.search-page-datepicker__header Даты пребывания в отеле
-      input(type="text" placeholder="ДД.ММ.ГГГГ").search-page-datepicker-plugin.text-field
+      +datepicker('Даты пребывания в отеле')
     .search-page-guest-dropdown.search-page-aside-block
       +dropdown('Гости', 'Взрослые', 'Дети', 'Младенцы', 'Сколько гостей')
     .search-page-range-slider.search-page-aside-block

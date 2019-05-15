@@ -1,9 +1,19 @@
-@import './button_filled_arrowed/button_filled_arrowed';
-
 .button_filled {
+  padding: 15px 20px;
   color: white;
   border: none;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  position: relative;
+
+  i {
+    width: 44px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+  }
 
   &:hover {
     opacity: 0.5;

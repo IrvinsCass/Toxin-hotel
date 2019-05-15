@@ -33,15 +33,14 @@ header {
     line-height: normal;
     color: $dark50;
     margin-right: 20px;
+
+    .button_filled {
+      padding: 9px 20px;
+    }
+
+    .button_transparent {
+      padding: 7px 20px;
+    }
   }
 
-  &__login-button {
-    width: 87px !important; 
-    height: 34px;
-  }
-
-  &__register-button {
-    width: 196px !important;
-    height: 34px;
-  }
 }
