@@ -1,0 +1,7 @@
+mixin radiobutton(first_option, second_option)
+  label.radiobutton__container= first_option
+    input(type="radio" name="Radio" checked)
+    span.radiobutton__checkmark
+  label.radiobutton__container= second_option
+    input(type="radio" name="Radio")
+    span.radiobutton__checkmark

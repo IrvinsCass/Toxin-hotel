@@ -4,7 +4,7 @@ import '../blocks/datepicker/datepicker';
 main();
 
 $(document).ready(function() {
-  $('.registration-field__datepicker').datepicker({
+  $('.datepicker-plugin').datepicker({
     position: "bottom center", 
     clearButton: true
   })

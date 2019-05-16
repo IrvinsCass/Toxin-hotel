@@ -1,40 +1,29 @@
-.form
+include ../button/button
+include ../radiobutton/radiobutton
+include ../datepicker/datepicker
+include ../toggle-switcher/toggle-switcher
+
+.form.registration-form
   h1.form-h1 Регистрация аккаунта
-  .form-text-field
-    input(type="text", name="" placeholder="Имя").text-field
-  .form-text-field
-    input(type="text", name="" placeholder="Фамилия").text-field
-  .registration-field-radio-container
-    label.radiobutton__container.registration-field-radiobutton Мужчина
-      input(type="radio" name="Radio" checked)
-      span.radiobutton__checkmark
-    label.radiobutton__container Женщина
-      input(type="radio" name="Radio")
-      span.radiobutton__checkmark
-  h3.registration-field__h3-header Дата рождения
-  input(type="text", name="" placeholder="ДД.ММ.ГГГГ").text-field.registration-field__text-field.registration-field__datepicker
-  h3.registration-field__h3-header данные для входа в сервис
-  input(type="email" placeholder="Email").text-field.registration-field__text-field
-  input(type="password" placeholder="Password").text-field.registration-field__text-field
-  .registration-field-toggle-container
-    label.toggle-switcher 
-      span.toggle-switcher__desription Получать спецпредложения
-      input(type="checkbox")
-      span.toggle-switcher__slider.toggle-switcher__round
-  button.button.button_filled.button_filled_arrowed Перейти к оплате
-    i.material-icons arrow_forward
-  .registration-field-enter
-    p.registration-field-enter__text Уже есть аккаунт на Toxin
-    button.button.button_transparent.registration-field-enter__button Войти
-
-
-
-  //- label.checkbox__container One
-  //-   input(type="checkbox" checked)
-  //-   span.checkbox__checkmark
-  //- label.checkbox__container Two
-  //-   input(type="checkbox")
-  //-   span.checkbox__checkmark
-
-
-
+  .form-section
+    .form-text-field
+      input(type="text", name="" placeholder="Имя").text-field
+    .form-text-field
+      input(type="text", name="" placeholder="Фамилия").text-field
+  .form-section.registration-form-radio-container
+    +radiobutton('Мужчина', 'Женщина')
+  .form-section
+    +datepicker('Дата рождения')
+  .form-section
+    h3.form-h3 данные для входа в сервис
+    .form-text-field.registration-form-text-field_no-margin
+      input(type="email" placeholder="Email").text-field
+    .form-text-field
+      input(type="password" placeholder="Password").text-field
+    +toggle-switcher('Получать спецпредложения')
+  .form-button.registration-form-button
+    +button-filled('Перейти к оплате', 'arrow_forward')
+  .form-section.registration-form-login
+    p.form-p Уже есть аккаунт на Toxin
+    .registration-form-login-button
+      +button-transparent('Войти')
