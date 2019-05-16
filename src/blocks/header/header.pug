@@ -2,7 +2,8 @@ header
   include ../button/button
   nav.header-nav
     .header-nav__logo
-      img(src="./img/header/logo.svg", alt="Toxin logo")
+      a(href="index.pug")
+        img(src="./img/header/logo.svg", alt="Toxin logo")
     ul.navbar
       li.navbar__item О нас
       li.navbar__item.navbar__item_dropdown Услуги
@@ -12,7 +13,9 @@ header
       li.navbar__item.navbar__item_dropdown Соглашения
         i.material-icons keyboard_arrow_down
       li.navbar__item
-        +button-transparent('Войти')
+        a(href="login.pug")
+          +button-transparent('Войти')
       li.navbar__item
-        +button-filled('Зарегистрироваться', 'arrow-forward')
+        a(href="registration.pug")
+          +button-filled('Зарегистрироваться', 'arrow-forward')
 

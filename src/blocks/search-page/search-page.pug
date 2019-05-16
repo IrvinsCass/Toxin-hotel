@@ -34,7 +34,8 @@ main.search-page
     include ../room/room
     h1.search-page-content__header Номера, которые мы для вас подобрали
     .search-page-content__item
-      +room("./img/rooms/room1.png", 888, 9990, 145, 'люкс')
+      a(href="booking.pug")
+        +room("./img/rooms/room1.png", 888, 9990, 145, 'люкс')
     .search-page-content__item
       +room("./img/rooms/room2.png", 840, 9900, 65)
     .search-page-content__item
