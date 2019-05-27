@@ -6,12 +6,13 @@ header {
 .header-nav {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 
   &__logo {
     width: 106px;
     height: 40px;
-    margin-right: 24.5%;
+    margin-right: 20px;
   }
 }
 
@@ -34,12 +35,30 @@ header {
     color: $dark50;
     margin-right: 20px;
 
+    @media screen and (max-width: 1040px) {
+      display: none;
+    }
+
+    &_hidden {
+      display: none;
+
+      @media screen and (max-width: 1040px) {
+        display: flex;
+      }
+    }
+
     .button_filled {
       padding: 9px 20px;
     }
 
     .button_transparent {
       padding: 7px 20px;
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: 1040px) {
+      display: flex;
     }
   }
 

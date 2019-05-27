@@ -5,6 +5,7 @@ header
       a(href="index.pug")
         img(src="./img/header/logo.svg", alt="Toxin logo")
     ul.navbar
+      li.navbar__item.navbar__item_hidden ///
       li.navbar__item О нас
       li.navbar__item.navbar__item_dropdown Услуги
         i.material-icons keyboard_arrow_down
@@ -12,10 +13,10 @@ header
       li.navbar__item Новости
       li.navbar__item.navbar__item_dropdown Соглашения
         i.material-icons keyboard_arrow_down
-      li.navbar__item
+      li.navbar__item.navbar__button
         a(href="login.pug")
           +button-transparent('Войти')
-      li.navbar__item
+      li.navbar__item.navbar__button
         a(href="registration.pug")
           +button-filled('Зарегистрироваться', 'arrow-forward')
 
