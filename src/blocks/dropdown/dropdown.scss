@@ -46,6 +46,12 @@
     font-weight: bold;
     text-transform: uppercase;
 
+    .counter {
+      display: block;
+      width: 8px;
+      text-align: center;
+    }
+
     &:last-child {
       border-radius: 0 0 4px 4px;
     }

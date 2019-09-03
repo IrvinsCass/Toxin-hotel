@@ -73,17 +73,17 @@
   .datepicker--cell.-range-from- {
     border: 1px solid rgba(92, 196, 239, 0.5);
     background-color: rgba(92, 196, 239, 0.1);
-    border-radius: 4px 0 0 4px; }
+    border-radius: 50% 0 0 50%; }
   .datepicker--cell.-range-to- {
     border: 1px solid rgba(92, 196, 239, 0.5);
     background-color: rgba(92, 196, 239, 0.1);
-    border-radius: 0 4px 4px 0; }
+    border-radius: 0 50% 50% 0; }
   .datepicker--cell.-range-from-.-range-to- {
     border-radius: 4px; }
   .datepicker--cell.-selected- {
     color: #fff;
     border: none;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
     .datepicker--cell.-selected-.-current- {
       color: #fff;

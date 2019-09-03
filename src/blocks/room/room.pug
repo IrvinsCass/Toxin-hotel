@@ -1,7 +1,8 @@
 include ../rate-button/rate-button
 mixin room(image, roomNumber, roomPrice, feedback, stars, roomLux)
   .room
-    img(src=image)
+    a(href="booking.pug")
+      img(src=image)
     ul.room__image-slider
       li.room__image-slider_filled
       li.room__image-slider_empty
