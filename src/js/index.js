@@ -1,6 +1,7 @@
 import main from './main';
 import '../blocks/datepicker/datepicker';
 import '../blocks/dropdown/dropdown';
+import '../blocks/header/header';
 
 main();
 

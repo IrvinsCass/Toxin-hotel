@@ -4,8 +4,17 @@ header
     .header-nav__logo
       a(href="index.pug")
         img(src="./img/header/logo.svg", alt="Toxin logo")
+      .header-nav-hidden-menu
+        i.fas.fa-align-justify
+        ul.header-nav-hidden-menu-ul(hidden)
+          li.header-nav-hidden-menu-ul__li О нас
+          li.header-nav-hidden-menu-ul__li Услуги
+            i.material-icons keyboard_arrow_right
+          li.header-nav-hidden-menu-ul__li Вакансии
+          li.header-nav-hidden-menu-ul__li Новости
+          li.header-nav-hidden-menu-ul__li Соглашения
+            i.material-icons keyboard_arrow_right
     ul.navbar
-      li.navbar__item.navbar__item_hidden ///
       li.navbar__item О нас
       li.navbar__item.navbar__item_dropdown Услуги
         i.material-icons keyboard_arrow_down
@@ -18,5 +27,5 @@ header
           +button-transparent('Войти')
       li.navbar__item.navbar__button
         a(href="registration.pug")
-          +button-filled('Зарегистрироваться', 'arrow-forward')
+          +button-filled('Зарегистрироваться')
 
