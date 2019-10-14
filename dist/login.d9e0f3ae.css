@@ -20,6 +20,26 @@ header {
   width: 100%;
   padding: 15px 9.7%;
 }
+@media screen and (min-width: 910px) and (max-width: 1024px) {
+  header {
+    padding: 15px 8.7%;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 910px) {
+  header {
+    padding: 15px 7.7%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  header {
+    padding: 15px 6.7%;
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    padding: 15px 5.7%;
+  }
+}
 
 .header-nav {
   display: flex;
@@ -47,6 +67,7 @@ header {
 }
 .header-nav-hidden-menu i {
   cursor: pointer;
+  margin-bottom: 3px;
 }
 .header-nav-hidden-menu-ul {
   padding: 15px;
@@ -65,6 +86,10 @@ header {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+.header-nav-hidden-menu-ul__li .material-icons {
+  width: 15px;
+  height: 15px;
 }
 
 .navbar {
@@ -162,32 +187,38 @@ header {
 }
 @media screen and (min-width: 910px) and (max-width: 1024px) {
   .navigation-links {
-    padding: 80px 8.7%;
+    padding: 80px 8.7% 0;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 910px) {
   .navigation-links {
-    padding: 60px 7.7%;
+    padding: 60px 7.7% 0;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 800px) {
   .navigation-links {
-    padding: 40px 6.7%;
+    padding: 40px 6.7% 0;
   }
 }
 @media screen and (max-width: 600px) {
   .navigation-links {
-    padding: 20px 5.7%;
+    padding: 20px 5.7% 0;
+    flex-direction: column;
   }
 }
 
 .footer-section {
   min-width: 140px;
-  max-width: 250px;
+  width: 19%;
 }
 @media screen and (max-width: 1024px) {
   .footer-section {
-    width: 28%;
+    width: 25%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-section {
+    width: 60%;
   }
 }
 
@@ -206,10 +237,50 @@ header {
   height: 40px;
 }
 
+.footer-description-hidden {
+  display: none;
+}
+.footer-description-hidden p {
+  margin-left: 15px;
+}
 @media screen and (max-width: 1024px) {
-  .footer-about {
-    width: 16%;
+  .footer-description-hidden {
+    display: flex;
+    align-items: center;
   }
+}
+@media screen and (min-width: 910px) and (max-width: 1024px) {
+  .footer-description-hidden {
+    padding: 20px 8.7% 60px;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 910px) {
+  .footer-description-hidden {
+    padding: 20px 7.7% 40px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .footer-description-hidden {
+    padding: 20px 6.7% 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-description-hidden {
+    padding: 20px 5.7% 20px;
+  }
+}
+
+.footer-about {
+  min-width: 120px;
+  width: 17%;
+}
+
+.footer-navigation {
+  widows: 18%;
+}
+
+.footer-support {
+  width: 22%;
 }
 
 .footer-list {
@@ -220,32 +291,39 @@ header {
           margin-block-start: 0;
   margin-right: 10px;
 }
+@media screen and (max-width: 600px) {
+  .footer-list {
+    display: none;
+  }
+}
 .footer-list__item {
   margin-bottom: 20px;
+  font-size: 15px;
   display: block;
 }
 @media screen and (min-width: 910px) and (max-width: 1040px) {
   .footer-list__item {
-    margin-bottom: 18x;
+    margin-bottom: 16x;
     font-size: 13px;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 910px) {
   .footer-list__item {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-size: 13px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 800px) {
   .footer-list__item {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     font-size: 12px;
   }
 }
 @media screen and (max-width: 600px) {
   .footer-list__item {
-    margin-bottom: 10px;
-    font-size: 12px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    font-size: 15px;
   }
 }
 .footer-list__item a {
@@ -261,7 +339,7 @@ header {
 }
 @media screen and (min-width: 1024px) {
   .footer-list__header {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1024px) {
@@ -269,9 +347,15 @@ header {
     font-size: 12px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 800px) {
   .footer-list__header {
     font-size: 11px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-list__header {
+    font-size: 15px;
+    cursor: pointer;
   }
 }
 
@@ -280,13 +364,31 @@ header {
 }
 
 .copyright-contacts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   border-top: 1px solid rgba(31, 32, 65, 0.25);
   padding: 26px 140px;
 }
-
-.copyright-contacts {
-  display: flex;
-  justify-content: space-between;
+@media screen and (min-width: 910px) and (max-width: 1024px) {
+  .copyright-contacts {
+    padding: 80px 8.7%;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 910px) {
+  .copyright-contacts {
+    padding: 60px 7.7%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .copyright-contacts {
+    padding: 40px 6.7%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .copyright-contacts {
+    padding: 20px 5.7%;
+  }
 }
 
 .footer-copyright {
@@ -1320,10 +1422,21 @@ input:checked + .toggle-switcher__slider:before {
   position: relative;
   width: 100%;
 }
+@media screen and (max-width: 800px) {
+  .index-main {
+    display: flex;
+    justify-content: center;
+  }
+}
 .index-main__img {
   width: 100%;
   min-width: 640px;
   min-height: 514px;
+}
+@media screen and (max-width: 800px) {
+  .index-main__img {
+    display: none;
+  }
 }
 
 .room-finder {
@@ -1331,15 +1444,27 @@ input:checked + .toggle-switcher__slider:before {
   left: 140px;
   top: 70px;
 }
+@media screen and (max-width: 800px) {
+  .room-finder {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
 
 .index-main__text {
   position: absolute;
   bottom: 18px;
-  right: 134px;
+  right: 10%;
   font-size: 14px;
   line-height: 24px;
   text-align: right;
   color: rgba(31, 32, 65, 0.75);
+}
+@media screen and (max-width: 800px) {
+  .index-main__text {
+    display: none;
+  }
 }
 
 .booking-page-header {

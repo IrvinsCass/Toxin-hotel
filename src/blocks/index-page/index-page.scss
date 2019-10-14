@@ -2,10 +2,19 @@
   position: relative;
   width: 100%;
 
+  @media screen and (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+  }
+
   &__img {
     width: 100%;
     min-width: 640px;
     min-height: 514px;
+  
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   }
 }
 
@@ -13,14 +22,24 @@
   position: absolute;
   left: 140px;
   top: 70px;
+
+  @media screen and (max-width: 800px) {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
 }
 
 .index-main__text {
   position: absolute;
   bottom: 18px;
-  right: 134px;
+  right: 10%;
   font-size: 14px;
   line-height: 24px;
   text-align: right;
   color: $dark75;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 }
