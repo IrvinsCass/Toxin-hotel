@@ -14,6 +14,12 @@ header
           li.header-nav-hidden-menu-ul__li Новости
           li.header-nav-hidden-menu-ul__li Соглашения
             i.material-icons keyboard_arrow_right
+          li.header-nav-hidden-menu-ul__li.header-nav-hidden-menu__button
+            a(href="login.pug")
+              +button-transparent('Войти')
+          li.header-nav-hidden-menu-ul__li.header-nav-hidden-menu__button
+            a(href="registration.pug")
+              +button-filled('Зарегистрироваться')
     ul.navbar
       li.navbar__item О нас
       li.navbar__item.navbar__item_dropdown Услуги

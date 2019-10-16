@@ -5,7 +5,23 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 0 140px;
+  padding: 0 9.7%;
+
+  @media screen and (min-width: 910px) and (max-width: 1024px) {
+    padding: 0 8.7%;
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 910px) {
+    padding: 0 7.7%;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 800px) {
+    padding: 0 6.7%;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0 5.7%;
+  }
 
   &-aside-block {
     margin-bottom: 30px;
@@ -13,7 +29,12 @@
 
   &-settings {
     width: 28%;
-    padding: 20px 60px 0 0;
+    min-width: 300px;
+    padding: 20px 40px 0 0;
+
+    @media screen and (max-width: 910px) {
+      display: none;
+    }
   }
 
   &-datepicker {
@@ -48,10 +69,10 @@
   }
 
   &-content {
-    width: 72%;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding-top: 20px;
 
@@ -62,7 +83,7 @@
     }
 
     &__item {
-      margin-bottom: 20px;
+      margin: 0 5px 20px;
     }
 
     &__pagination {

@@ -89,16 +89,22 @@
 }
 
 .footer-about{
-  min-width: 120px;
-  width: 17%;
+  @media screen and (min-width: 1024px) {
+    min-width: 120px;
+    width: 17%;
+  }
 }
 
 .footer-navigation {
-  widows: 18%;
+  @media screen and (min-width: 1024px) {
+    width: 20%;
+  }
 }
 
 .footer-support {
-  width: 22%;
+  @media screen and (min-width: 1024px) {
+    width: 25%;
+  }
 }
 
 .footer-list {

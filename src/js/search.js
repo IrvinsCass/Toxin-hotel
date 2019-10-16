@@ -1,6 +1,10 @@
 import main from './main';
 import '../blocks/header/header';
 import '../blocks/footer/footer';
+import '../blocks/datepicker/datepicker';
+import '../blocks/dropdown/dropdown';
+import '../blocks/range-slider/range-slider';
+import '../blocks/checkbox-list/checkbox-list';
 
 main();
 
