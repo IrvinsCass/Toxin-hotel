@@ -3,6 +3,7 @@ import '../blocks/datepicker/datepicker';
 import '../blocks/dropdown/dropdown';
 import '../blocks/header/header';
 import '../blocks/footer/footer';
+import '../blocks/pie-chart/pie-chart';
 
 $(document).ready(function() {
   $('.datepicker-plugin').datepicker({

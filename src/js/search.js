@@ -5,6 +5,7 @@ import '../blocks/datepicker/datepicker';
 import '../blocks/dropdown/dropdown';
 import '../blocks/range-slider/range-slider';
 import '../blocks/checkbox-list/checkbox-list';
+import '../blocks/search-page/search-page';
 
 main();
 
