@@ -214,6 +214,13 @@ $(document).ready(function () {
   button.onclick = function () {
     menu.hidden = !menu.hidden;
   };
+
+  var auth = document.querySelector('.header-nav-hidden-auth');
+  var authField = document.querySelector('.header-nav-hidden-auth-field');
+
+  auth.onclick = function () {
+    authField.hidden = !authField.hidden;
+  };
 });
 },{}],"src/blocks/footer/footer.js":[function(require,module,exports) {
 $(document).ready(function () {
@@ -265,7 +272,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49530" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49737" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

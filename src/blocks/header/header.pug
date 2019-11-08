@@ -1,25 +1,28 @@
 header
   include ../button/button
   nav.header-nav
+    .header-nav-hidden-menu
+      i.material-icons.mi-menu-button menu
+      ul.header-nav-hidden-menu-ul(hidden)
+        li.header-nav-hidden-menu-ul__li О нас
+        li.header-nav-hidden-menu-ul__li Услуги
+          i.material-icons keyboard_arrow_right
+        li.header-nav-hidden-menu-ul__li Вакансии
+        li.header-nav-hidden-menu-ul__li Новости
+        li.header-nav-hidden-menu-ul__li Соглашения
+          i.material-icons keyboard_arrow_right
     .header-nav__logo
       a(href="index.pug")
         img(src="./img/header/logo.svg", alt="Toxin logo")
-      .header-nav-hidden-menu
-        i.material-icons.mi-menu-button menu
-        ul.header-nav-hidden-menu-ul(hidden)
-          li.header-nav-hidden-menu-ul__li О нас
-          li.header-nav-hidden-menu-ul__li Услуги
-            i.material-icons keyboard_arrow_right
-          li.header-nav-hidden-menu-ul__li Вакансии
-          li.header-nav-hidden-menu-ul__li Новости
-          li.header-nav-hidden-menu-ul__li Соглашения
-            i.material-icons keyboard_arrow_right
-          li.header-nav-hidden-menu-ul__li.header-nav-hidden-menu__button
-            a(href="login.pug")
-              +button-transparent('Войти')
-          li.header-nav-hidden-menu-ul__li.header-nav-hidden-menu__button
-            a(href="registration.pug")
-              +button-filled('Зарегистрироваться')
+    .header-nav-hidden-auth
+      i.material-icons account_circle
+      .header-nav-hidden-auth-field(hidden)
+        .header-nav-hidden-auth-field__button
+          a(href="login.pug")
+            +button-transparent('Войти')
+        .header-nav-hidden-auth-field__button
+          a(href="registration.pug")
+            +button-filled('Зарегистрироваться')
     ul.navbar
       li.navbar__item О нас
       li.navbar__item.navbar__item_dropdown Услуги

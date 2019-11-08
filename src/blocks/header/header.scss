@@ -32,6 +32,48 @@ header {
     align-items: center;
     color: $dark50;
     position: relative;
+
+    @media screen and (max-width: 600px) {
+      margin-right: 0;
+    }
+  }
+
+  &-hidden-auth {
+    display: none;
+    position: relative;
+
+    @media screen and (max-width: 600px) {
+      display: flex;
+      margin-right: 20px;
+    }
+
+    &-field {
+      position: absolute;
+      right: -10px;
+      background-color: #fff;
+      border-radius: 10px;
+      top: 30px;
+      padding: 0 15px;
+      z-index: 100;
+
+      &__button {
+        margin-bottom: 10px;
+        text-align: right;
+
+        .button_filled {
+          font-size: 9px;
+          padding: 9px 20px;
+          min-width: 80px;
+        }
+    
+        .button_transparent {
+          width: 60%;
+          font-size: 9px;
+          padding: 7px 20px;
+        }
+      }
+    }
+
   }
 
   &-hidden-menu {
@@ -56,7 +98,7 @@ header {
       font-size: 14px;
       position: absolute;
       list-style: none;
-      right: -50px;
+      left: 10px;
       top: 40px;
       z-index: 999;
       border-radius: 4px;
@@ -73,21 +115,6 @@ header {
         }
       }
     }
-
-    &__button {
-
-      .button_filled {
-        font-size: 10px;
-        padding: 9px 20px;
-        width: 100%;
-        min-width: 80px;
-      }
-  
-      .button_transparent {
-        font-size: 10px;
-        padding: 7px 20px;
-      }
-    }
   }
 }
 
@@ -97,6 +124,10 @@ header {
   flex-direction: row;
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 
   &__item {
     min-width: 42px;

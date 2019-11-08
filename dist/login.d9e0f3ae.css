@@ -55,6 +55,44 @@ header {
   color: rgba(31, 32, 65, 0.5);
   position: relative;
 }
+@media screen and (max-width: 600px) {
+  .header-nav__logo {
+    margin-right: 0;
+  }
+}
+.header-nav-hidden-auth {
+  display: none;
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .header-nav-hidden-auth {
+    display: flex;
+    margin-right: 20px;
+  }
+}
+.header-nav-hidden-auth-field {
+  position: absolute;
+  right: -10px;
+  background-color: #fff;
+  border-radius: 10px;
+  top: 30px;
+  padding: 0 15px;
+  z-index: 100;
+}
+.header-nav-hidden-auth-field__button {
+  margin-bottom: 10px;
+  text-align: right;
+}
+.header-nav-hidden-auth-field__button .button_filled {
+  font-size: 9px;
+  padding: 9px 20px;
+  min-width: 80px;
+}
+.header-nav-hidden-auth-field__button .button_transparent {
+  width: 60%;
+  font-size: 9px;
+  padding: 7px 20px;
+}
 .header-nav-hidden-menu {
   display: none;
 }
@@ -76,7 +114,7 @@ header {
   font-size: 14px;
   position: absolute;
   list-style: none;
-  right: -50px;
+  left: 10px;
   top: 40px;
   z-index: 999;
   border-radius: 4px;
@@ -91,16 +129,6 @@ header {
   width: 15px;
   height: 15px;
 }
-.header-nav-hidden-menu__button .button_filled {
-  font-size: 10px;
-  padding: 9px 20px;
-  width: 100%;
-  min-width: 80px;
-}
-.header-nav-hidden-menu__button .button_transparent {
-  font-size: 10px;
-  padding: 7px 20px;
-}
 
 .navbar {
   list-style: none;
@@ -108,6 +136,11 @@ header {
   flex-direction: row;
   margin: 0;
   padding: 0;
+}
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
 }
 .navbar__item {
   min-width: 42px;
