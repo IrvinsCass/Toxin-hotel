@@ -1,11 +1,7 @@
 main.booking-page
   article.booking-page-header
-    .booking-page-header__img_big
-      img(src="./img/booking/image1.png", alt="")
-    .booking-page-header__img_small_top
-      img(src="./img/booking/image2.png", alt="")
-    .booking-page-header__img_small_bottom
-      img(src="./img/booking/image3.png", alt="")
+    include ../room-photos/room-photos
+    +room-photos('./img/booking/image1.png', './img/booking/image2.png', './img/booking/image3.png')
   article.booking-page-content
     section.booking-page-content-left
       include ../room-details/room-details

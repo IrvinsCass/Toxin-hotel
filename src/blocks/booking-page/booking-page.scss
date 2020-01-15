@@ -1,24 +1,7 @@
 .booking-page {
 
   &-header {
-    position: relative;
-    height: 489px;
-
-    &__img_big {
-      position: absolute;
-    }
-
-    &__img_small_top {
-      position: absolute;
-      right: 0;
-      top: 0
-    }
-
-    &__img_small_bottom {
-      position: absolute;
-      right: 0;
-      top: 243px;
-    }
+    width: 100%;
   }
 
   &-content {
