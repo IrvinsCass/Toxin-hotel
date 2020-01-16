@@ -7,8 +7,34 @@
   &-content {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     padding: 70px 140px;
+
+    @media screen and (max-width: 1024px) {
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1200px) {
+      padding: 20px 7.7% 60px;
+    }
+
+    @media screen and (min-width: 910px) and (max-width: 1024px) {
+      padding: 20px 8.7% 60px;
+    }
+  
+    @media screen and (min-width: 800px) and (max-width: 910px) {
+      padding: 20px 7.7% 40px;
+    }
+  
+    @media screen and (min-width: 600px) and (max-width: 800px) {
+      padding: 20px 6.7% 30px;
+    }
+  
+    @media screen and (max-width: 600px) {
+      padding: 20px 5.7% 20px;
+    }
 
     &__header {
       margin-bottom: 20px;
@@ -29,7 +55,13 @@
 
     &-right {
       max-width: 511px;
-      padding-left: 70px;
+      min-width: 380px;
+      display: flex;
+      justify-content: center;
+
+      @media screen and (max-width: 910px) {
+        max-width: 100%;
+      }
     }
 
     &-room-info {
@@ -37,6 +69,10 @@
       max-width: 291px;
       display: flex;
       flex-direction: column;
+
+      @media screen and (max-width: 910px) {
+        margin-right: 0;
+      }
 
       &__item {
         max-width: 280px;
@@ -63,6 +99,10 @@
       max-width: 711px;
       position: relative;
 
+      @media screen and (max-width: 910px) {
+        margin-right: 0;
+      }
+
       &__comments-counter {
         position: absolute;
         line-height: 14px;
@@ -77,6 +117,18 @@
 
     &-booking-form {
       margin-right: 0;
+      min-width: 380px;
+
+      @media screen and (max-width: 600px) {
+        min-width: 320px;
+      }
+    }
+
+    &-booking-form .form {
+      min-width: 320px;
+      @media screen and (max-width: 600px) {
+        padding: 0;
+      }
     }
   }
 }

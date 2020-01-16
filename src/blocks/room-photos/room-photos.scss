@@ -32,11 +32,19 @@
     object-fit: contain;
 
     @media screen and (max-width: 800px) {
-      height: 192px;
+      min-width: 500px;
+    }
+
+    @media screen and (max-width: 500px) {
+      min-width: 400px;
     }
 
     &-small {
       margin-bottom: -2px;
+
+      @media screen and (max-width: 800px) {
+        margin-bottom: 4px;
+      }
     }
   }
 }

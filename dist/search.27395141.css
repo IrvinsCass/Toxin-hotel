@@ -1385,11 +1385,21 @@ input:checked + .toggle-switcher__slider:before {
 }
 @media screen and (max-width: 800px) {
   .room-photos__img {
-    height: 192px;
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .room-photos__img {
+    min-width: 400px;
   }
 }
 .room-photos__img-small {
   margin-bottom: -2px;
+}
+@media screen and (max-width: 800px) {
+  .room-photos__img-small {
+    margin-bottom: 4px;
+  }
 }
 
 .form {
@@ -1581,8 +1591,40 @@ input:checked + .toggle-switcher__slider:before {
 .booking-page-content {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   padding: 70px 140px;
+}
+@media screen and (max-width: 1024px) {
+  .booking-page-content {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .booking-page-content {
+    padding: 20px 7.7% 60px;
+  }
+}
+@media screen and (min-width: 910px) and (max-width: 1024px) {
+  .booking-page-content {
+    padding: 20px 8.7% 60px;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 910px) {
+  .booking-page-content {
+    padding: 20px 7.7% 40px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .booking-page-content {
+    padding: 20px 6.7% 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .booking-page-content {
+    padding: 20px 5.7% 20px;
+  }
 }
 .booking-page-content__header {
   margin-bottom: 20px;
@@ -1600,13 +1642,25 @@ input:checked + .toggle-switcher__slider:before {
 }
 .booking-page-content-right {
   max-width: 511px;
-  padding-left: 70px;
+  min-width: 380px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 910px) {
+  .booking-page-content-right {
+    max-width: 100%;
+  }
 }
 .booking-page-content-room-info {
   width: 100%;
   max-width: 291px;
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 910px) {
+  .booking-page-content-room-info {
+    margin-right: 0;
+  }
 }
 .booking-page-content-room-info__item {
   max-width: 280px;
@@ -1629,6 +1683,11 @@ input:checked + .toggle-switcher__slider:before {
   max-width: 711px;
   position: relative;
 }
+@media screen and (max-width: 910px) {
+  .booking-page-content-comments {
+    margin-right: 0;
+  }
+}
 .booking-page-content-comments__comments-counter {
   position: absolute;
   line-height: 14px;
@@ -1640,6 +1699,20 @@ input:checked + .toggle-switcher__slider:before {
 }
 .booking-page-content-booking-form {
   margin-right: 0;
+  min-width: 380px;
+}
+@media screen and (max-width: 600px) {
+  .booking-page-content-booking-form {
+    min-width: 320px;
+  }
+}
+.booking-page-content-booking-form .form {
+  min-width: 320px;
+}
+@media screen and (max-width: 600px) {
+  .booking-page-content-booking-form .form {
+    padding: 0;
+  }
 }
 
 .login-registration-page {
