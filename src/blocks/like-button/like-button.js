@@ -10,5 +10,11 @@ comments.addEventListener('click', function() {
   if (target.classList.contains('button-like')) {
     target.classList.toggle('button-like_pressed');
 
+    let likes = target.querySelector('span').innerHTML;
+    target.querySelector('span').innerHTML = likes * 1 - 1;
+
+    if (target.classList.contains('button-like_pressed')) {
+      target.querySelector('span').innerHTML = likes * 1 + 1;
+    }
   }
 })
