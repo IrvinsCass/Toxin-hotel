@@ -8,5 +8,5 @@ mixin comment(photo, name, time, content, likes)
         span.comment-header__text_thin= time
     .comment-content
       .comment-content-like
-        +like-button_liked(like= likes)
+        +like-button(like= likes)
       p.comment-content__text= content

@@ -1278,14 +1278,14 @@ input:checked + .toggle-switcher__slider:before {
 .button-like span {
   line-height: 12px;
 }
-.button-like_liked {
+.button-like_pressed {
   border: 2px solid transparent;
   background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   background-origin: border-box;
   box-shadow: 2px 1000px 1px #fff inset;
 }
-.button-like_liked i,
-.button-like_liked span {
+.button-like_pressed i,
+.button-like_pressed span {
   color: #BC9CFF;
 }
 

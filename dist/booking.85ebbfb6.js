@@ -21815,7 +21815,19 @@ var myChart = new Chart(ctx, {
 });
 myChart.canvas.parentNode.style.height = '120px';
 myChart.canvas.parentNode.style.width = '120px';
-},{"chart.js":"node_modules/chart.js/dist/Chart.js"}],"src/js/booking.js":[function(require,module,exports) {
+},{"chart.js":"node_modules/chart.js/dist/Chart.js"}],"src/blocks/like-button/like-button.js":[function(require,module,exports) {
+'use strict';
+
+var comments = document.querySelector('.booking-page-content-comments');
+comments.addEventListener('click', function () {
+  var target = event.target.closest('button');
+  if (!target) return;
+
+  if (target.classList.contains('button-like')) {
+    target.classList.toggle('button-like_pressed');
+  }
+});
+},{}],"src/js/booking.js":[function(require,module,exports) {
 "use strict";
 
 var _main = _interopRequireDefault(require("./main"));
@@ -21830,6 +21842,8 @@ require("../blocks/footer/footer");
 
 require("../blocks/pie-chart/pie-chart");
 
+require("../blocks/like-button/like-button");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
@@ -21841,7 +21855,7 @@ $(document).ready(function () {
   });
 });
 (0, _main.default)();
-},{"./main":"src/js/main.js","../blocks/datepicker/datepicker":"src/blocks/datepicker/datepicker.js","../blocks/dropdown/dropdown":"src/blocks/dropdown/dropdown.js","../blocks/header/header":"src/blocks/header/header.js","../blocks/footer/footer":"src/blocks/footer/footer.js","../blocks/pie-chart/pie-chart":"src/blocks/pie-chart/pie-chart.js"}],"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./main":"src/js/main.js","../blocks/datepicker/datepicker":"src/blocks/datepicker/datepicker.js","../blocks/dropdown/dropdown":"src/blocks/dropdown/dropdown.js","../blocks/header/header":"src/blocks/header/header.js","../blocks/footer/footer":"src/blocks/footer/footer.js","../blocks/pie-chart/pie-chart":"src/blocks/pie-chart/pie-chart.js","../blocks/like-button/like-button":"src/blocks/like-button/like-button.js"}],"C:/Users/Konica/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -21869,7 +21883,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58846" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57622" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
